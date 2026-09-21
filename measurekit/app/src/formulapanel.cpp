@@ -47,22 +47,33 @@ FormulaPanel::FormulaPanel(mk::FormulaEngine* engine, QWidget* parent)
     formulaList_ = new QListWidget;
     splitter->addWidget(categoryList_);
     splitter->addWidget(formulaList_);
-    layout->addWidget(splitter, 1);
+    splitter->setStretchFactor(0, 0);
+    splitter->setStretchFactor(1, 1);
 
     infoLabel_ = new QLabel;
     infoLabel_->setWordWrap(true);
     infoLabel_->setStyleSheet(QStringLiteral("color: #555;"));
-    layout->addWidget(infoLabel_);
 
-    // 参数表单放在滚动区，公式参数多时仍可访问
+    // 参数表单放在滚动区；与公式列表之间用分割条隔开，可上下拖拽调整高度
     auto* paramContainer = new QWidget;
     paramForm_ = new QFormLayout(paramContainer);
     paramForm_->setContentsMargins(0, 0, 0, 0);
     auto* scroll = new QScrollArea;
     scroll->setWidget(paramContainer);
     scroll->setWidgetResizable(true);
-    scroll->setMaximumHeight(180);
-    layout->addWidget(scroll);
+
+    auto* bottom = new QWidget;
+    auto* bottomLayout = new QVBoxLayout(bottom);
+    bottomLayout->setContentsMargins(0, 0, 0, 0);
+    bottomLayout->addWidget(infoLabel_);
+    bottomLayout->addWidget(scroll, 1);
+
+    auto* mainSplitter = new QSplitter(Qt::Vertical);
+    mainSplitter->addWidget(splitter);
+    mainSplitter->addWidget(bottom);
+    mainSplitter->setStretchFactor(0, 3);
+    mainSplitter->setStretchFactor(1, 2);
+    layout->addWidget(mainSplitter, 1);
 
     auto* btn = new QPushButton(tr("计算"));
     layout->addWidget(btn);
