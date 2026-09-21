@@ -1,0 +1,36 @@
+cmake_minimum_required(VERSION 3.22)
+# C：SDK 的纯 C 示例需要；CXX：内核与 SDK 主体
+project(measurekit VERSION 0.1.0 LANGUAGES C CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+option(MK_BUILD_APP "Build Qt6 desktop application" ON)
+option(MK_BUILD_TESTS "Build unit tests" ON)
+option(MK_BUILD_SDK "Build C ABI SDK layer" ON)
+
+# enable_testing 必须在所有 add_subdirectory 之前，
+# 否则 sdk 等子目录中注册的 add_test 不会进入 ctest
+if(MK_BUILD_TESTS)
+    enable_testing()
+endif()
+
+add_subdirectory(kernel)
+
+# M1 里程碑：sdk/ 与 app/ 尚无 CMakeLists.txt，待后续里程碑实现后移除 EXISTS 判断
+if(MK_BUILD_SDK AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/sdk/CMakeLists.txt)
+    add_subdirectory(sdk)
+endif()
+
+if(MK_BUILD_APP AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/app/CMakeLists.txt)
+    add_subdirectory(app)
+endif()
+
+if(MK_BUILD_TESTS)
+    add_subdirectory(kernel/tests)
+endif()

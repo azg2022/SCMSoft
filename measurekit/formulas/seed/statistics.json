@@ -1,0 +1,202 @@
+[
+  {
+    "name": "算术均值（三点）",
+    "latex": "\\bar{x}=\\frac{x_1+x_2+x_3}{3}",
+    "expr": "(x1+x2+x3)/3",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+    ]
+  },
+  {
+    "name": "加权均值（三点）",
+    "latex": "\\bar{x}_w=\\frac{\\sum x_i w_i}{\\sum w_i}",
+    "expr": "(x1*w1+x2*w2+x3*w3)/(w1+w2+w3)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "w1", "label": "权重 1", "unit": "", "domain": "w1>=0", "default": 1},
+      {"symbol": "w2", "label": "权重 2", "unit": "", "domain": "w2>=0", "default": 2},
+      {"symbol": "w3", "label": "权重 3", "unit": "", "domain": "w3>=0, w1+w2+w3>0", "default": 3}
+    ]
+  },
+  {
+    "name": "几何均值（三点）",
+    "latex": "G=(x_1 x_2 x_3)^{1/3}",
+    "expr": "(x1*x2*x3)^(1/3)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "x1>0", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "x2>0", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "x3>0", "default": 3}
+    ]
+  },
+  {
+    "name": "调和均值（三点）",
+    "latex": "H=\\frac{3}{1/x_1+1/x_2+1/x_3}",
+    "expr": "3/(1/x1+1/x2+1/x3)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "x1>0", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "x2>0", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "x3>0", "default": 3}
+    ]
+  },
+  {
+    "name": "样本方差（三点）",
+    "latex": "s^2=\\frac{1}{2}\\sum (x_i-\\bar{x})^2",
+    "expr": "((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/2",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+    ]
+  },
+  {
+    "name": "总体方差（三点）",
+    "latex": "\\sigma^2=\\frac{1}{3}\\sum (x_i-\\bar{x})^2",
+    "expr": "((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/3",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+    ]
+  },
+  {
+    "name": "样本标准差（三点）",
+    "latex": "s=\\sqrt{\\frac{1}{2}\\sum (x_i-\\bar{x})^2}",
+    "expr": "sqrt(((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/2)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+    ]
+  },
+  {
+    "name": "协方差（三点）",
+    "latex": "\\mathrm{cov}(X,Y)=\\frac{1}{3}\\sum (x_i-m_x)(y_i-m_y)",
+    "expr": "((x1-mx)*(y1-my)+(x2-mx)*(y2-my)+(x3-mx)*(y3-my))/3",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
+      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
+      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6},
+      {"symbol": "mx", "label": "X 均值", "unit": "", "domain": "", "default": 2},
+      {"symbol": "my", "label": "Y 均值", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "皮尔逊相关系数（三点）",
+    "latex": "r=\\frac{\\sum (x_i-m_x)(y_i-m_y)}{\\sqrt{\\sum (x_i-m_x)^2 \\sum (y_i-m_y)^2}}",
+    "expr": "((x1-mx)*(y1-my)+(x2-mx)*(y2-my)+(x3-mx)*(y3-my))/sqrt(((x1-mx)^2+(x2-mx)^2+(x3-mx)^2)*((y1-my)^2+(y2-my)^2+(y3-my)^2))",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
+      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
+      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6},
+      {"symbol": "mx", "label": "X 均值", "unit": "", "domain": "", "default": 2},
+      {"symbol": "my", "label": "Y 均值", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "最小二乘斜率（三点）",
+    "latex": "b=\\frac{n\\sum x_i y_i-\\sum x_i \\sum y_i}{n\\sum x_i^2-(\\sum x_i)^2}",
+    "expr": "(3*(x1*y1+x2*y2+x3*y3)-(x1+x2+x3)*(y1+y2+y3))/(3*(x1^2+x2^2+x3^2)-(x1+x2+x3)^2)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
+      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
+      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6}
+    ]
+  },
+  {
+    "name": "最小二乘截距（三点）",
+    "latex": "a=\\frac{\\sum y_i-b\\sum x_i}{n}",
+    "expr": "((y1+y2+y3)-b*(x1+x2+x3))/3",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
+      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
+      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6},
+      {"symbol": "b", "label": "回归斜率", "unit": "", "domain": "", "default": 2}
+    ]
+  },
+  {
+    "name": "均方误差 MSE（三点）",
+    "latex": "\\mathrm{MSE}=\\frac{1}{3}\\sum (y_i-p_i)^2",
+    "expr": "((y1-p1)^2+(y2-p2)^2+(y3-p3)^2)/3",
+    "category": "statistics",
+    "params": [
+      {"symbol": "y1", "label": "真实值 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "y2", "label": "真实值 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "y3", "label": "真实值 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "p1", "label": "预测值 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "p2", "label": "预测值 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "p3", "label": "预测值 3", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "均方根误差 RMSE（三点）",
+    "latex": "\\mathrm{RMSE}=\\sqrt{\\frac{1}{3}\\sum (y_i-p_i)^2}",
+    "expr": "sqrt(((y1-p1)^2+(y2-p2)^2+(y3-p3)^2)/3)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "y1", "label": "真实值 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "y2", "label": "真实值 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "y3", "label": "真实值 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "p1", "label": "预测值 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "p2", "label": "预测值 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "p3", "label": "预测值 3", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "变异系数",
+    "latex": "CV=\\frac{\\sigma}{\\mu}",
+    "expr": "sigma/mu",
+    "category": "statistics",
+    "params": [
+      {"symbol": "sigma", "label": "标准差", "unit": "", "domain": "sigma>=0", "default": 1},
+      {"symbol": "mu", "label": "均值", "unit": "", "domain": "mu!=0", "default": 4}
+    ]
+  },
+  {
+    "name": "标准误",
+    "latex": "SE=\\frac{\\sigma}{\\sqrt{n}}",
+    "expr": "sigma/sqrt(n)",
+    "category": "statistics",
+    "params": [
+      {"symbol": "sigma", "label": "总体标准差", "unit": "", "domain": "sigma>=0", "default": 2},
+      {"symbol": "n", "label": "样本量", "unit": "", "domain": "n>=1", "default": 16}
+    ]
+  },
+  {
+    "name": "z 分数",
+    "latex": "z=\\frac{x-\\mu}{\\sigma}",
+    "expr": "(x-mu)/sigma",
+    "category": "statistics",
+    "params": [
+      {"symbol": "x", "label": "观测值", "unit": "", "domain": "", "default": 85},
+      {"symbol": "mu", "label": "均值", "unit": "", "domain": "", "default": 80},
+      {"symbol": "sigma", "label": "标准差", "unit": "", "domain": "sigma>0", "default": 5}
+    ]
+  }
+]

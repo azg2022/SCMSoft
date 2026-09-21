@@ -1,0 +1,191 @@
+[
+  {
+    "name": "球体积",
+    "latex": "V=\\frac{4}{3}\\pi r^3",
+    "expr": "(4/3)*pi*r^3",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "球半径", "unit": "", "domain": "r>0", "default": 1}
+    ]
+  },
+  {
+    "name": "球表面积",
+    "latex": "S=4\\pi r^2",
+    "expr": "4*pi*r^2",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "球半径", "unit": "", "domain": "r>0", "default": 1}
+    ]
+  },
+  {
+    "name": "圆面积",
+    "latex": "S=\\pi r^2",
+    "expr": "pi*r^2",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "圆半径", "unit": "", "domain": "r>0", "default": 1}
+    ]
+  },
+  {
+    "name": "圆周长",
+    "latex": "C=2\\pi r",
+    "expr": "2*pi*r",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "圆半径", "unit": "", "domain": "r>0", "default": 1}
+    ]
+  },
+  {
+    "name": "扇形面积",
+    "latex": "S=\\frac{1}{2}r^2\\theta",
+    "expr": "(1/2)*r^2*theta",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "半径", "unit": "", "domain": "r>0", "default": 1},
+      {"symbol": "theta", "label": "圆心角（弧度）", "unit": "rad", "domain": "theta>0", "default": 1}
+    ]
+  },
+  {
+    "name": "圆弧长",
+    "latex": "l=r\\theta",
+    "expr": "r*theta",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "半径", "unit": "", "domain": "r>0", "default": 1},
+      {"symbol": "theta", "label": "圆心角（弧度）", "unit": "rad", "domain": "theta>0", "default": 1}
+    ]
+  },
+  {
+    "name": "圆柱体积",
+    "latex": "V=\\pi r^2h",
+    "expr": "pi*r^2*h",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "底面半径", "unit": "", "domain": "r>0", "default": 1},
+      {"symbol": "h", "label": "高", "unit": "", "domain": "h>0", "default": 1}
+    ]
+  },
+  {
+    "name": "圆锥体积",
+    "latex": "V=\\frac{1}{3}\\pi r^2h",
+    "expr": "(1/3)*pi*r^2*h",
+    "category": "calculus",
+    "params": [
+      {"symbol": "r", "label": "底面半径", "unit": "", "domain": "r>0", "default": 1},
+      {"symbol": "h", "label": "高", "unit": "", "domain": "h>0", "default": 1}
+    ]
+  },
+  {
+    "name": "圆台体积",
+    "latex": "V=\\frac{1}{3}\\pi h(R^2+Rr+r^2)",
+    "expr": "(1/3)*pi*h*(R^2+R*r+r^2)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "R", "label": "下底半径", "unit": "", "domain": "R>0", "default": 2},
+      {"symbol": "r", "label": "上底半径", "unit": "", "domain": "r>0", "default": 1},
+      {"symbol": "h", "label": "高", "unit": "", "domain": "h>0", "default": 1}
+    ]
+  },
+  {
+    "name": "梯形法则（单区间积分近似）",
+    "latex": "\\int_a^b f(x)dx\\approx\\frac{b-a}{2}[f(a)+f(b)]",
+    "expr": "(b-a)/2*(fa+fb)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "a", "label": "左端点", "unit": "", "domain": "", "default": 0},
+      {"symbol": "b", "label": "右端点", "unit": "", "domain": "b>a", "default": 1},
+      {"symbol": "fa", "label": "f(a)", "unit": "", "domain": "", "default": 1},
+      {"symbol": "fb", "label": "f(b)", "unit": "", "domain": "", "default": 2}
+    ]
+  },
+  {
+    "name": "辛普森法则（单区间积分近似）",
+    "latex": "\\int_a^b f(x)dx\\approx\\frac{b-a}{6}[f(a)+4f(m)+f(b)]",
+    "expr": "(b-a)/6*(fa+4*fm+fb)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "a", "label": "左端点", "unit": "", "domain": "", "default": 0},
+      {"symbol": "b", "label": "右端点", "unit": "", "domain": "b>a", "default": 2},
+      {"symbol": "fa", "label": "f(a)", "unit": "", "domain": "", "default": 1},
+      {"symbol": "fm", "label": "f((a+b)/2)", "unit": "", "domain": "", "default": 4},
+      {"symbol": "fb", "label": "f(b)", "unit": "", "domain": "", "default": 9}
+    ]
+  },
+  {
+    "name": "中点法则（单区间积分近似）",
+    "latex": "\\int_a^b f(x)dx\\approx(b-a)f(m)",
+    "expr": "(b-a)*fm",
+    "category": "calculus",
+    "params": [
+      {"symbol": "a", "label": "左端点", "unit": "", "domain": "", "default": 0},
+      {"symbol": "b", "label": "右端点", "unit": "", "domain": "b>a", "default": 1},
+      {"symbol": "fm", "label": "f((a+b)/2)", "unit": "", "domain": "", "default": 1}
+    ]
+  },
+  {
+    "name": "平均变化率",
+    "latex": "\\frac{\\Delta f}{\\Delta x}=\\frac{f(x_1)-f(x_0)}{x_1-x_0}",
+    "expr": "(f1-f0)/(x1-x0)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "x0", "label": "起点 x", "unit": "", "domain": "", "default": 0},
+      {"symbol": "x1", "label": "终点 x", "unit": "", "domain": "x1!=x0", "default": 1},
+      {"symbol": "f0", "label": "f(x0)", "unit": "", "domain": "", "default": 0},
+      {"symbol": "f1", "label": "f(x1)", "unit": "", "domain": "", "default": 2}
+    ]
+  },
+  {
+    "name": "中心差分近似导数",
+    "latex": "f'(x)\\approx\\frac{f(x+h)-f(x-h)}{2h}",
+    "expr": "(fph-fmh)/(2*h)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "h", "label": "步长", "unit": "", "domain": "h>0", "default": 0.01},
+      {"symbol": "fph", "label": "f(x+h)", "unit": "", "domain": "", "default": 1.01005},
+      {"symbol": "fmh", "label": "f(x-h)", "unit": "", "domain": "", "default": 0.99005}
+    ]
+  },
+  {
+    "name": "牛顿-莱布尼茨公式",
+    "latex": "\\int_a^b f(x)dx=F(b)-F(a)",
+    "expr": "Fb-Fa",
+    "category": "calculus",
+    "params": [
+      {"symbol": "Fa", "label": "原函数 F(a)", "unit": "", "domain": "", "default": 0},
+      {"symbol": "Fb", "label": "原函数 F(b)", "unit": "", "domain": "", "default": 1}
+    ]
+  },
+  {
+    "name": "曲线曲率半径",
+    "latex": "\\rho=\\frac{(1+y'^2)^{3/2}}{|y''|}",
+    "expr": "(1+yp^2)^(3/2)/abs(ypp)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "yp", "label": "一阶导 y'", "unit": "", "domain": "", "default": 0},
+      {"symbol": "ypp", "label": "二阶导 y''", "unit": "", "domain": "ypp!=0", "default": 1}
+    ]
+  },
+  {
+    "name": "曲线弧长（常导数近似）",
+    "latex": "L\\approx(b-a)\\sqrt{1+y'^2}",
+    "expr": "(b-a)*sqrt(1+yp^2)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "a", "label": "起点", "unit": "", "domain": "", "default": 0},
+      {"symbol": "b", "label": "终点", "unit": "", "domain": "b>a", "default": 1},
+      {"symbol": "yp", "label": "导数 y'", "unit": "", "domain": "", "default": 1}
+    ]
+  },
+  {
+    "name": "一阶泰勒近似",
+    "latex": "L(x)=f(x_0)+f'(x_0)(x-x_0)",
+    "expr": "f0+yp*(x-x0)",
+    "category": "calculus",
+    "params": [
+      {"symbol": "x0", "label": "展开点", "unit": "", "domain": "", "default": 0},
+      {"symbol": "x", "label": "求值点", "unit": "", "domain": "", "default": 0.1},
+      {"symbol": "f0", "label": "f(x0)", "unit": "", "domain": "", "default": 1},
+      {"symbol": "yp", "label": "f'(x0)", "unit": "", "domain": "", "default": 2}
+    ]
+  }
+]

@@ -1,0 +1,228 @@
+[
+  {
+    "name": "2x2 矩阵行列式",
+    "latex": "\\det A=ad-bc",
+    "expr": "a*d-b*c",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 逆矩阵（1,1）元素",
+    "latex": "A^{-1}_{11}=\\frac{d}{ad-bc}",
+    "expr": "d/(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 逆矩阵（1,2）元素",
+    "latex": "A^{-1}_{12}=\\frac{-b}{ad-bc}",
+    "expr": "-b/(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 逆矩阵（2,1）元素",
+    "latex": "A^{-1}_{21}=\\frac{-c}{ad-bc}",
+    "expr": "-c/(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 逆矩阵（2,2）元素",
+    "latex": "A^{-1}_{22}=\\frac{a}{ad-bc}",
+    "expr": "a/(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 矩阵的迹",
+    "latex": "\\mathrm{tr}(A)=a+d",
+    "expr": "a+d",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 特征方程判别式",
+    "latex": "\\Delta=(a+d)^2-4(ad-bc)",
+    "expr": "(a+d)^2-4*(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 较大特征值",
+    "latex": "\\lambda_1=\\frac{(a+d)+\\sqrt{(a+d)^2-4(ad-bc)}}{2}",
+    "expr": "((a+d)+sqrt((a+d)^2-4*(a*d-b*c)))/2",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "判别式>=0", "default": 4}
+    ]
+  },
+  {
+    "name": "2x2 较小特征值",
+    "latex": "\\lambda_2=\\frac{(a+d)-\\sqrt{(a+d)^2-4(ad-bc)}}{2}",
+    "expr": "((a+d)-sqrt((a+d)^2-4*(a*d-b*c)))/2",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "判别式>=0", "default": 4}
+    ]
+  },
+  {
+    "name": "克拉默法则 x（二元方程组）",
+    "latex": "x=\\frac{ed-bf}{ad-bc}",
+    "expr": "(e*d-b*f)/(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "x 系数（方程 1）", "unit": "", "domain": "", "default": 2},
+      {"symbol": "b", "label": "y 系数（方程 1）", "unit": "", "domain": "", "default": 1},
+      {"symbol": "c", "label": "x 系数（方程 2）", "unit": "", "domain": "", "default": 1},
+      {"symbol": "d", "label": "y 系数（方程 2）", "unit": "", "domain": "ad-bc!=0", "default": 3},
+      {"symbol": "e", "label": "常数项（方程 1）", "unit": "", "domain": "", "default": 5},
+      {"symbol": "f", "label": "常数项（方程 2）", "unit": "", "domain": "", "default": 6}
+    ]
+  },
+  {
+    "name": "克拉默法则 y（二元方程组）",
+    "latex": "y=\\frac{af-ec}{ad-bc}",
+    "expr": "(a*f-e*c)/(a*d-b*c)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "x 系数（方程 1）", "unit": "", "domain": "", "default": 2},
+      {"symbol": "b", "label": "y 系数（方程 1）", "unit": "", "domain": "", "default": 1},
+      {"symbol": "c", "label": "x 系数（方程 2）", "unit": "", "domain": "", "default": 1},
+      {"symbol": "d", "label": "y 系数（方程 2）", "unit": "", "domain": "ad-bc!=0", "default": 3},
+      {"symbol": "e", "label": "常数项（方程 1）", "unit": "", "domain": "", "default": 5},
+      {"symbol": "f", "label": "常数项（方程 2）", "unit": "", "domain": "", "default": 6}
+    ]
+  },
+  {
+    "name": "3x3 矩阵行列式（按第一行展开）",
+    "latex": "\\det A=a(ei-fh)-b(di-fg)+c(dh-eg)",
+    "expr": "a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
+      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
+      {"symbol": "c", "label": "元素 a13", "unit": "", "domain": "", "default": 3},
+      {"symbol": "d", "label": "元素 a21", "unit": "", "domain": "", "default": 0},
+      {"symbol": "e", "label": "元素 a22", "unit": "", "domain": "", "default": 1},
+      {"symbol": "f", "label": "元素 a23", "unit": "", "domain": "", "default": 4},
+      {"symbol": "g", "label": "元素 a31", "unit": "", "domain": "", "default": 5},
+      {"symbol": "h", "label": "元素 a32", "unit": "", "domain": "", "default": 6},
+      {"symbol": "i", "label": "元素 a33", "unit": "", "domain": "", "default": 0}
+    ]
+  },
+  {
+    "name": "2x2 矩阵乘法（1,1）元素",
+    "latex": "C_{11}=a_{11}b_{11}+a_{12}b_{21}",
+    "expr": "a11*b11+a12*b21",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a11", "label": "A(1,1)", "unit": "", "domain": "", "default": 1},
+      {"symbol": "a12", "label": "A(1,2)", "unit": "", "domain": "", "default": 2},
+      {"symbol": "b11", "label": "B(1,1)", "unit": "", "domain": "", "default": 5},
+      {"symbol": "b21", "label": "B(2,1)", "unit": "", "domain": "", "default": 7}
+    ]
+  },
+  {
+    "name": "2x2 矩阵乘法（1,2）元素",
+    "latex": "C_{12}=a_{11}b_{12}+a_{12}b_{22}",
+    "expr": "a11*b12+a12*b22",
+    "category": "linalg",
+    "params": [
+      {"symbol": "a11", "label": "A(1,1)", "unit": "", "domain": "", "default": 1},
+      {"symbol": "a12", "label": "A(1,2)", "unit": "", "domain": "", "default": 2},
+      {"symbol": "b12", "label": "B(1,2)", "unit": "", "domain": "", "default": 6},
+      {"symbol": "b22", "label": "B(2,2)", "unit": "", "domain": "", "default": 8}
+    ]
+  },
+  {
+    "name": "三维向量点积",
+    "latex": "\\vec{x}\\cdot\\vec{y}=x_1y_1+x_2y_2+x_3y_3",
+    "expr": "x1*y1+x2*y2+x3*y3",
+    "category": "linalg",
+    "params": [
+      {"symbol": "x1", "label": "x 分量 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "x 分量 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "x 分量 3", "unit": "", "domain": "", "default": 3},
+      {"symbol": "y1", "label": "y 分量 1", "unit": "", "domain": "", "default": 4},
+      {"symbol": "y2", "label": "y 分量 2", "unit": "", "domain": "", "default": 5},
+      {"symbol": "y3", "label": "y 分量 3", "unit": "", "domain": "", "default": 6}
+    ]
+  },
+  {
+    "name": "三维向量模长",
+    "latex": "|\\vec{x}|=\\sqrt{x_1^2+x_2^2+x_3^2}",
+    "expr": "sqrt(x1^2+x2^2+x3^2)",
+    "category": "linalg",
+    "params": [
+      {"symbol": "x1", "label": "分量 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "分量 2", "unit": "", "domain": "", "default": 2},
+      {"symbol": "x3", "label": "分量 3", "unit": "", "domain": "", "default": 2}
+    ]
+  },
+  {
+    "name": "向量夹角余弦（三维）",
+    "latex": "\\cos\\theta=\\frac{\\vec{x}\\cdot\\vec{y}}{|\\vec{x}||\\vec{y}|}",
+    "expr": "(x1*y1+x2*y2+x3*y3)/(sqrt(x1^2+x2^2+x3^2)*sqrt(y1^2+y2^2+y3^2))",
+    "category": "linalg",
+    "params": [
+      {"symbol": "x1", "label": "x 分量 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "x 分量 2", "unit": "", "domain": "", "default": 0},
+      {"symbol": "x3", "label": "x 分量 3", "unit": "", "domain": "", "default": 0},
+      {"symbol": "y1", "label": "y 分量 1", "unit": "", "domain": "", "default": 0},
+      {"symbol": "y2", "label": "y 分量 2", "unit": "", "domain": "", "default": 1},
+      {"symbol": "y3", "label": "y 分量 3", "unit": "", "domain": "两向量均非零", "default": 0}
+    ]
+  },
+  {
+    "name": "二维向量叉积（标量）",
+    "latex": "\\vec{x}\\times\\vec{y}=x_1y_2-x_2y_1",
+    "expr": "x1*y2-x2*y1",
+    "category": "linalg",
+    "params": [
+      {"symbol": "x1", "label": "x 分量 1", "unit": "", "domain": "", "default": 1},
+      {"symbol": "x2", "label": "x 分量 2", "unit": "", "domain": "", "default": 0},
+      {"symbol": "y1", "label": "y 分量 1", "unit": "", "domain": "", "default": 0},
+      {"symbol": "y2", "label": "y 分量 2", "unit": "", "domain": "", "default": 1}
+    ]
+  }
+]
