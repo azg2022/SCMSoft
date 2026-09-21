@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=度量衡 MeasureKit
+Name[en]=MeasureKit
+Comment=智能科学计算器：表达式计算、符号求导、线性代数、公式库
+Comment[en]=Scientific calculator: expression evaluation, symbolic differentiation, linear algebra, formula library
+Exec=measurekit
+Icon=measurekit
+Terminal=false
+Categories=Education;Science;Utility;
+Keywords=calculator;math;science;计算器;数学;
+StartupNotify=true

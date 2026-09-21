@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 
 #include <QCloseEvent>
+#include <QCoreApplication>
 #include <QDir>
 #include <QDockWidget>
 #include <QFile>
@@ -50,8 +51,28 @@ MainWindow::MainWindow() {
     // 公式库：首次运行播种内置公式
     const QString dbPath = dataDir_ + QStringLiteral("/formulas.db");
     engine_ = std::make_unique<mk::FormulaEngine>(dbPath.toStdString());
-    if (engine_->listByCategory(QStringLiteral("general").toStdString()).empty())
-        engine_->seedFromJsonDir(MK_SEED_DIR);
+
+    // 种子目录按优先级回退：开发目录 → exe 旁 → 安装目录 → Linux 系统目录
+    const QString appDir = QCoreApplication::applicationDirPath();
+    const QStringList seedCandidates = {
+        QStringLiteral(MK_SEED_DIR),
+        appDir + QStringLiteral("/seed"),
+        appDir + QStringLiteral("/../share/measurekit/seed"),
+        QStringLiteral("/usr/share/measurekit/seed"),
+    };
+    if (engine_->listByCategory(QStringLiteral("general").toStdString()).empty()) {
+        for (const QString& dir : seedCandidates) {
+            if (QDir(dir).exists()) {
+                try {
+                    engine_->seedFromJsonDir(dir.toStdString());
+                } catch (const std::exception& e) {
+                    QMessageBox::warning(this, tr("公式库加载失败"),
+                                         tr("内置公式加载失败：%1").arg(QString::fromStdString(e.what())));
+                }
+                break;
+            }
+        }
+    }
 
     auto* tabs = new QTabWidget;
     tabs->addTab(buildCalcTab(), tr("计算"));
