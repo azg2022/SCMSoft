@@ -1,0 +1,49 @@
+name: Windows 构建与发布
+
+# 触发时机：推送到 main 验证构建健康；打 v* 标签自动发布 Release；也可手动运行
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Qt 6.4.2 (MSVC 64 位)
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: "6.4.2"
+          arch: win64_msvc2019_64
+          cache: true
+
+      - name: CMake 配置
+        run: cmake -B build -G "Visual Studio 17 2022" -A x64 -DMK_BUILD_TESTS=OFF -DMK_BUILD_SDK=OFF -DMK_BUILD_CLI=OFF
+
+      - name: 构建 Release
+        run: cmake --build build --config Release
+
+      - name: 打包（NSIS 安装程序 + ZIP 便携包）
+        run: cmake --build build --target package --config Release
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: measurekit-windows
+          path: |
+            build/measurekit-*.exe
+            build/measurekit-*.zip
+
+      - name: 发布到 GitHub Releases（仅标签触发）
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/measurekit-*.exe
+            build/measurekit-*.zip

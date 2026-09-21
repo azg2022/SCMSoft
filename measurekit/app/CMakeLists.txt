@@ -26,13 +26,19 @@ install(TARGETS measurekit RUNTIME DESTINATION bin)
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/formulas/seed DESTINATION share/measurekit)
 
 if(WIN32)
-    # 构建后自动收集 Qt DLL 到 exe 旁，便于本地拿到就能跑
-    find_program(WINDEPLOYQT windeployqt)
-    if(WINDEPLOYQT)
+    # 构建后自动收集 Qt DLL 到 exe 旁，便于本地拿到就能跑。
+    # 优先使用 Qt6 自带的 windeployqt 目标（CI 环境 PATH 中不一定有）
+    if(TARGET Qt6::windeployqt)
         add_custom_command(TARGET measurekit POST_BUILD
-            COMMAND ${WINDEPLOYQT} --no-translations --no-opengl-sw $<TARGET_FILE:measurekit>)
+            COMMAND $<TARGET_FILE:Qt6::windeployqt> --no-translations $<TARGET_FILE:measurekit>)
     else()
-        message(WARNING "未找到 windeployqt，Windows 下需手动部署 Qt DLL")
+        find_program(WINDEPLOYQT windeployqt)
+        if(WINDEPLOYQT)
+            add_custom_command(TARGET measurekit POST_BUILD
+                COMMAND ${WINDEPLOYQT} --no-translations $<TARGET_FILE:measurekit>)
+        else()
+            message(WARNING "未找到 windeployqt，Windows 下需手动部署 Qt DLL")
+        endif()
     endif()
 endif()
 
