@@ -9,6 +9,8 @@ add_library(mk_kernel STATIC
     src/numerics.cpp
 )
 target_include_directories(mk_kernel PUBLIC include)
+# SDK 与应用通过 MK_VERSION 获取版本号，保证与 CMake project 版本单一来源
+target_compile_definitions(mk_kernel PUBLIC MK_VERSION="${PROJECT_VERSION}")
 
 # 内核以静态库形式被链接进共享库 measurekit_sdk：需要位置无关代码；
 # 隐藏可见性使内核符号不会经共享库泄漏进 ABI（SDK 只导出 MK_API 标注的函数）

@@ -242,7 +242,7 @@ void mk_free_string(char* s) {
 }
 
 const char* mk_version(void) {
-    return "0.1.0";
+    return MK_VERSION;
 }
 
 } // extern "C"

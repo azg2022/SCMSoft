@@ -116,9 +116,9 @@ MainWindow::MainWindow() {
     QMenu* helpMenu = menuBar()->addMenu(tr("帮助"));
     helpMenu->addAction(tr("关于 MeasureKit"), this, [this] {
         QMessageBox::about(this, tr("关于 MeasureKit"),
-                           tr("度量衡 MeasureKit 0.1.0\n"
+                           tr("度量衡 MeasureKit %1\n"
                               "智能科学计算器：表达式计算 · 符号求导 · 线性代数 · 公式库\n"
-                              "内核：C++17 ｜ 界面：Qt 6"));
+                              "内核：C++17 ｜ 界面：Qt 6").arg(QStringLiteral(MK_VERSION)));
     });
 
     // 工具栏：面板开关 + 清空历史
