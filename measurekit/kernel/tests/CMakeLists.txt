@@ -8,6 +8,7 @@ add_executable(mk_tests
     test_differentiate.cpp
     test_simplify.cpp
     test_numerics.cpp
+    test_evalsteps.cpp
 )
 target_link_libraries(mk_tests PRIVATE mk_kernel GTest::gtest_main)
 

@@ -151,6 +151,13 @@ QWidget* MainWindow::buildCalcTab() {
     statusLabel_->setStyleSheet(QStringLiteral("color: #c0392b;"));
     layout->addWidget(statusLabel_);
 
+    // 分步求值过程（后序，最后一行是完整表达式与最终结果）
+    stepsList_ = new QListWidget;
+    stepsList_->setMaximumHeight(140);
+    stepsList_->setStyleSheet(QStringLiteral(
+        "QListWidget { background: #fafafa; border: 1px solid #e0e0e0; }"));
+    layout->addWidget(stepsList_);
+
     // 计算器键盘（基础/函数/变量三套布局），填充下方空间
     layout->addWidget(new CalcKeypad(exprEdit_, [this] { evaluateCurrent(); }), 1);
 
@@ -212,6 +219,7 @@ void MainWindow::onExprEdited(const QString& text) {
         exprEdit_->setStyleSheet(QString());
         statusLabel_->clear();
         resultLabel_->setText(tr("—"));
+        stepsList_->clear();
         return;
     }
     // 赋值形式只校验等号右侧
@@ -256,22 +264,32 @@ void MainWindow::evaluateCurrent() {
             resultLabel_->setText(name + QStringLiteral(" = ") + formatValue(v));
             statusLabel_->clear();
             exprEdit_->setStyleSheet(QString());
+            stepsList_->clear();
             appendHistory(text, formatValue(v));
             return;
         }
 
         auto ast = mk::parse(text.toStdString());
-        const double v = mk::evaluate(*ast, env_);
+        std::vector<mk::EvalStep> steps;
+        const double v = mk::evaluate(*ast, env_, &steps);
         resultLabel_->setText(formatValue(v));
         statusLabel_->clear();
         exprEdit_->setStyleSheet(QString());
+        stepsList_->clear();
+        for (const auto& s : steps) {
+            auto* item = new QListWidgetItem(QString::fromStdString(s.expr) +
+                                             QStringLiteral("  =  ") + formatValue(s.value));
+            stepsList_->addItem(item);
+        }
         appendHistory(text, formatValue(v));
     } catch (const mk::MkError& e) {
         resultLabel_->setText(tr("错误"));
         statusLabel_->setText(QString::fromStdString(e.what()));
+        stepsList_->clear();
     } catch (const std::exception& e) {
         resultLabel_->setText(tr("错误"));
         statusLabel_->setText(QString::fromStdString(e.what()));
+        stepsList_->clear();
     }
 }
 

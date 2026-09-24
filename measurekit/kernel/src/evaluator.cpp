@@ -3,6 +3,7 @@
 #include <cmath>
 
 #include "mk/error.h"
+#include "mk/printer.h"
 
 namespace mk {
 
@@ -95,7 +96,7 @@ bool isKnownFn(const std::string& fn) {
     return false;
 }
 
-double evalNode(const Node& n, const Env& env) {
+double evalNode(const Node& n, const Env& env, std::vector<EvalStep>* steps) {
     double result = 0.0;
 
     switch (n.kind) {
@@ -115,7 +116,7 @@ double evalNode(const Node& n, const Env& env) {
         break;
 
     case Node::Kind::Unary: {
-        double a = evalNode(*n.args[0], env);
+        double a = evalNode(*n.args[0], env, steps);
         switch (n.op) {
         case '-': result = -a; break;
         case '+': result = a; break;
@@ -128,8 +129,8 @@ double evalNode(const Node& n, const Env& env) {
     }
 
     case Node::Kind::Binary: {
-        double l = evalNode(*n.args[0], env);
-        double r = evalNode(*n.args[1], env);
+        double l = evalNode(*n.args[0], env, steps);
+        double r = evalNode(*n.args[1], env, steps);
         switch (n.op) {
         case '+': result = l + r; break;
         case '-': result = l - r; break;
@@ -150,8 +151,8 @@ double evalNode(const Node& n, const Env& env) {
         if (!isKnownFn(n.name))
             throw MkError("未知函数 '" + n.name + "'");
         if (n.name == "log" && n.args.size() == 2) {
-            double base = evalNode(*n.args[0], env);
-            double x = evalNode(*n.args[1], env);
+            double base = evalNode(*n.args[0], env, steps);
+            double x = evalNode(*n.args[1], env, steps);
             if (base <= 0.0 || base == 1.0)
                 throw MkError("对数的底数必须大于 0 且不等于 1");
             if (x <= 0.0)
@@ -162,20 +163,27 @@ double evalNode(const Node& n, const Env& env) {
         if (n.args.size() != 1)
             throw MkError("函数 '" + n.name + "' 需要 1 个参数，实际给了 " +
                           std::to_string(n.args.size()) + " 个");
-        result = applyUnaryFn(n.name, evalNode(*n.args[0], env));
+        result = applyUnaryFn(n.name, evalNode(*n.args[0], env, steps));
         break;
     }
     }
 
     if (!std::isfinite(result))
         throw MkError("数值溢出或结果超出范围");
+    // 数字字面量不产生步骤；其余节点按后序记录归约过程
+    if (steps && n.kind != Node::Kind::Number)
+        steps->push_back({toString(n), result});
     return result;
 }
 
 } // namespace
 
 double evaluate(const Node& n, const Env& env) {
-    return evalNode(n, env);
+    return evalNode(n, env, nullptr);
+}
+
+double evaluate(const Node& n, const Env& env, std::vector<EvalStep>* steps) {
+    return evalNode(n, env, steps);
 }
 
 } // namespace mk

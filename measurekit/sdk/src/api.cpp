@@ -9,6 +9,7 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <vector>
 
 #include "mk/differentiate.h"
 #include "mk/error.h"
@@ -95,6 +96,62 @@ mk_eval_result mk_evaluate_with(const char* expr, const char** names,
 
 mk_eval_result mk_evaluate(const char* expr) {
     return mk_evaluate_with(expr, nullptr, nullptr, 0);
+}
+
+namespace {
+
+// 校验表达式与变量绑定参数，合法时填充 env；失败返回非 OK 状态
+mk_status bindEnv(const char* expr, const char** names, const double* values,
+                  size_t count, mk::Env& env, const char** err) {
+    if (!expr) {
+        *err = setError("表达式为空");
+        return MK_ERR_INVALID_ARG;
+    }
+    if (count > 0 && (!names || !values)) {
+        *err = setError("变量名/值数组为空");
+        return MK_ERR_INVALID_ARG;
+    }
+    for (size_t i = 0; i < count; ++i) {
+        if (!names[i]) {
+            *err = setError("变量名为空");
+            return MK_ERR_INVALID_ARG;
+        }
+        env[names[i]] = values[i];
+    }
+    return MK_OK;
+}
+
+} // namespace
+
+mk_string_result mk_evaluate_steps(const char* expr, const char** names,
+                                   const double* values, size_t count) {
+    mk::Env env;
+    const char* err = nullptr;
+    if (bindEnv(expr, names, values, count, env, &err) != MK_OK)
+        return {MK_ERR_INVALID_ARG, nullptr, err};
+
+    try {
+        mk::NodePtr ast = mk::parse(expr);
+        std::vector<mk::EvalStep> steps;
+        mk::evaluate(*ast, env, &steps);
+
+        std::string out;
+        char line[512];
+        for (const auto& s : steps) {
+            std::snprintf(line, sizeof(line), "%s = %.12g\n",
+                          s.expr.c_str(), s.value);
+            out += line;
+        }
+        char* buf = static_cast<char*>(std::malloc(out.size() + 1));
+        if (!buf)
+            return {MK_ERR_EVAL, nullptr, setError("内存分配失败")};
+        std::memcpy(buf, out.c_str(), out.size() + 1);
+        return {MK_OK, buf, nullptr};
+    } catch (const mk::MkError& e) {
+        return {MK_ERR_EVAL, nullptr, setError(e.what())};
+    } catch (const std::exception& e) {
+        return {MK_ERR_EVAL, nullptr, setError(e.what())};
+    }
 }
 
 mk_string_result mk_differentiate(const char* expr, const char* var,

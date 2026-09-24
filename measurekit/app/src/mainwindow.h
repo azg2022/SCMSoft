@@ -46,6 +46,7 @@ private:
     QLineEdit* exprEdit_ = nullptr;
     QLabel* resultLabel_ = nullptr;
     QLabel* statusLabel_ = nullptr;
+    QListWidget* stepsList_ = nullptr; // 计算标签页的分步求值过程
     QListWidget* history_ = nullptr;
     QString dataDir_;
 };

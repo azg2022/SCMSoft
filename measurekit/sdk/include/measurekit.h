@@ -58,6 +58,12 @@ MK_API mk_eval_result mk_evaluate_with(const char* expr,
                                        const char** names, const double* values,
                                        size_t count);
 
+/* 分步求值：返回逐行 "子表达式 = 结果" 的计算步骤（后序，最后一行为完整表达式与最终结果），
+ * text 由 mk_free_string 释放；expr/names/values 用法同 mk_evaluate_with */
+MK_API mk_string_result mk_evaluate_steps(const char* expr,
+                                          const char** names, const double* values,
+                                          size_t count);
+
 /* 符号求导（对 var 求 order 阶导，order >= 1），输出化简后的解析式 */
 MK_API mk_string_result mk_differentiate(const char* expr, const char* var,
                                          unsigned order);

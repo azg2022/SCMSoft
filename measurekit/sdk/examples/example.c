@@ -37,6 +37,13 @@ int main(void) {
     printf("d/dx x*sin(x) = %s\n", r3.text ? r3.text : "(null)");
     mk_free_string(r3.text);
 
+    /* 分步求值：2+3*4 → 先 3*4=12，再 2+12=14 */
+    mk_string_result r11 = mk_evaluate_steps("2+3*4", NULL, NULL, 0);
+    check(r11.status == MK_OK && r11.text && strstr(r11.text, "3*4 = 12") &&
+          strstr(r11.text, "2+3*4 = 14"), "mk_evaluate_steps");
+    printf("steps of 2+3*4:\n%s", r11.text ? r11.text : "(null)");
+    mk_free_string(r11.text);
+
     /* 错误路径：语法错误 → MK_ERR_PARSE 且带位置 */
     mk_eval_result r4 = mk_evaluate("1+*2");
     check(r4.status == MK_ERR_PARSE && r4.error != NULL, "parse error mapping");
