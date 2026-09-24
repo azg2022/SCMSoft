@@ -22,12 +22,11 @@ endif()
 
 add_subdirectory(kernel)
 
-# M1 里程碑：sdk/ 与 app/ 尚无 CMakeLists.txt，待后续里程碑实现后移除 EXISTS 判断
-if(MK_BUILD_SDK AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/sdk/CMakeLists.txt)
+if(MK_BUILD_SDK)
     add_subdirectory(sdk)
 endif()
 
-if(MK_BUILD_APP AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/app/CMakeLists.txt)
+if(MK_BUILD_APP)
     add_subdirectory(app)
 endif()
 

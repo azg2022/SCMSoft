@@ -1,0 +1,49 @@
+name: Linux 构建与发布
+
+# 触发时机：推送到 main 验证构建与测试；打 v* 标签自动发布 Release；也可手动运行
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装依赖（Qt6 / Eigen / SQLite / GTest）
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential cmake \
+            qt6-base-dev libgl1-mesa-dev \
+            libeigen3-dev libsqlite3-dev libgtest-dev
+
+      - name: CMake 配置
+        run: cmake -S measurekit -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: 构建
+        run: cmake --build build -j "$(nproc)"
+
+      - name: 运行单元测试
+        run: ctest --test-dir build --output-on-failure
+
+      - name: 打包（.deb）
+        run: cmake --build build --target package
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: measurekit-linux
+          path: build/measurekit-*.deb
+
+      - name: 发布到 GitHub Releases（仅标签触发）
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/measurekit-*.deb

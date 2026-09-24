@@ -15,10 +15,10 @@ if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     exit 1
 fi
 
-# 同步更新根 CMakeLists.txt 中的项目版本号
-sed -i -E "s/^project\(measurekit VERSION [0-9]+\.[0-9]+\.[0-9]+/project(measurekit VERSION ${VERSION}/" CMakeLists.txt
+# 同步更新 measurekit/CMakeLists.txt 中的项目版本号
+sed -i -E "s/^project\(measurekit VERSION [0-9]+\.[0-9]+\.[0-9]+/project(measurekit VERSION ${VERSION}/" measurekit/CMakeLists.txt
 
-git add CMakeLists.txt
+git add measurekit/CMakeLists.txt
 if ! git diff --cached --quiet; then
     git commit -m "chore: 发布 v${VERSION}${NOTE:+（${NOTE}）}"
 fi

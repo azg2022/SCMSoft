@@ -24,7 +24,7 @@ jobs:
           cache: true
 
       - name: CMake 配置
-        run: cmake -S measurekit -B build -G "Visual Studio 17 2022" -A x64 -DMK_BUILD_TESTS=OFF -DMK_BUILD_SDK=OFF -DMK_BUILD_CLI=OFF
+        run: cmake -S measurekit -B build -G "Visual Studio 17 2022" -A x64 -DMK_BUILD_TESTS=OFF -DMK_BUILD_SDK=OFF
 
       - name: 构建 Release
         run: cmake --build build --config Release
