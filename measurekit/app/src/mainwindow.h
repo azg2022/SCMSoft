@@ -6,6 +6,9 @@
 #include <unordered_map>
 
 #include "mk/evaluator.h"
+#ifdef MK_HAVE_SQLITE
+#include "mk/history.h"
+#endif
 
 class QLineEdit;
 class QLabel;
@@ -31,17 +34,23 @@ private slots:
     void onExprEdited(const QString& text);
     void onExprReturn();
     void onHistoryDoubleClicked(QListWidgetItem* item);
+    void onClearHistory();
+    void onExportHistory();
 
 private:
     QWidget* buildCalcTab();
     QWidget* buildDiffTab();
     void evaluateCurrent();
-    void appendHistory(const QString& expr, const QString& result);
+    // persist=false 仅展示不入库（加载历史时用）
+    void appendHistory(const QString& expr, const QString& result, bool persist = true);
     void loadHistory();
     void saveHistory() const;
 
     mk::Env env_; // 计算标签页中的变量绑定（x=5 赋值累积）
     std::unique_ptr<mk::FormulaEngine> engine_;
+#ifdef MK_HAVE_SQLITE
+    std::unique_ptr<mk::HistoryStore> historyStore_; // SQLite 持久化，立即写入
+#endif
 
     QLineEdit* exprEdit_ = nullptr;
     QLabel* resultLabel_ = nullptr;

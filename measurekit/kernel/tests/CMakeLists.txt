@@ -22,7 +22,7 @@ endif()
 # 公式引擎测试仅在 SQLite 可用时编译（与 kernel 库同一探测条件）
 find_package(SQLite3 QUIET)
 if(SQLite3_FOUND)
-    target_sources(mk_tests PRIVATE test_formula.cpp)
+    target_sources(mk_tests PRIVATE test_formula.cpp test_history.cpp)
     target_compile_definitions(mk_tests PRIVATE
         MK_HAVE_SQLITE
         MK_SEED_DIR="${CMAKE_SOURCE_DIR}/formulas/seed")

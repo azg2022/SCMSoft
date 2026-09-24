@@ -5,6 +5,7 @@
 #include <QDir>
 #include <QDockWidget>
 #include <QFile>
+#include <QFileDialog>
 #include <QFont>
 #include <QFormLayout>
 #include <QHBoxLayout>
@@ -51,6 +52,11 @@ MainWindow::MainWindow() {
     // 公式库：首次运行播种内置公式
     const QString dbPath = dataDir_ + QStringLiteral("/formulas.db");
     engine_ = std::make_unique<mk::FormulaEngine>(dbPath.toStdString());
+
+#ifdef MK_HAVE_SQLITE
+    historyStore_ = std::make_unique<mk::HistoryStore>(
+        (dataDir_ + QStringLiteral("/history.db")).toStdString());
+#endif
 
     // 种子目录按优先级回退：开发目录 → exe 旁 → 安装目录 → Linux 系统目录
     const QString appDir = QCoreApplication::applicationDirPath();
@@ -121,7 +127,8 @@ MainWindow::MainWindow() {
     toolBar->addAction(formulaDock->toggleViewAction());
     toolBar->addAction(historyDock->toggleViewAction());
     toolBar->addSeparator();
-    toolBar->addAction(tr("清空历史"), this, [this] { history_->clear(); });
+    toolBar->addAction(tr("清空历史"), this, &MainWindow::onClearHistory);
+    toolBar->addAction(tr("导出历史…"), this, &MainWindow::onExportHistory);
 
     loadHistory();
 }
@@ -293,11 +300,56 @@ void MainWindow::evaluateCurrent() {
     }
 }
 
-void MainWindow::appendHistory(const QString& expr, const QString& result) {
+void MainWindow::appendHistory(const QString& expr, const QString& result, bool persist) {
+#ifdef MK_HAVE_SQLITE
+    if (persist) {
+        try {
+            historyStore_->add(expr.toStdString(), result.toStdString());
+        } catch (const std::exception&) {
+            // 历史持久化失败不影响本次计算
+        }
+    }
+#else
+    Q_UNUSED(persist);
+#endif
     auto* item = new QListWidgetItem(expr + QStringLiteral("  =  ") + result);
     item->setData(Qt::UserRole, expr);
     item->setToolTip(expr);
     history_->insertItem(0, item);
+}
+
+void MainWindow::onClearHistory() {
+    history_->clear();
+#ifdef MK_HAVE_SQLITE
+    try {
+        historyStore_->clear();
+    } catch (const std::exception&) {
+    }
+#endif
+}
+
+void MainWindow::onExportHistory() {
+#ifdef MK_HAVE_SQLITE
+    const QString path = QFileDialog::getSaveFileName(
+        this, tr("导出历史记录"), QDir::home().filePath(QStringLiteral("measurekit-history.csv")),
+        tr("CSV 文件 (*.csv)"), nullptr);
+    if (path.isEmpty())
+        return;
+    try {
+        const std::string csv = historyStore_->toCsv();
+        QFile f(path);
+        if (!f.open(QIODevice::WriteOnly | QIODevice::Text))
+            throw std::runtime_error("无法写入文件");
+        f.write(csv.c_str(), static_cast<qint64>(csv.size()));
+        QMessageBox::information(this, tr("导出成功"),
+                                 tr("历史记录已导出到：\n%1").arg(path));
+    } catch (const std::exception& e) {
+        QMessageBox::warning(this, tr("导出失败"), QString::fromStdString(e.what()));
+    }
+#else
+    QMessageBox::information(this, tr("导出历史记录"),
+                             tr("当前构建未启用 SQLite，历史记录导出不可用。"));
+#endif
 }
 
 void MainWindow::onHistoryDoubleClicked(QListWidgetItem* item) {
@@ -306,6 +358,35 @@ void MainWindow::onHistoryDoubleClicked(QListWidgetItem* item) {
 }
 
 void MainWindow::loadHistory() {
+#ifdef MK_HAVE_SQLITE
+    // 迁移旧版纯文本历史（仅当数据库为空时）
+    const QString legacyPath = dataDir_ + QStringLiteral("/history.txt");
+    try {
+        if (QFile::exists(legacyPath) && historyStore_->list(1).empty()) {
+            QFile f(legacyPath);
+            if (f.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                QTextStream in(&f);
+                QStringList lines;
+                while (!in.atEnd())
+                    lines << in.readLine();
+                // 文件内最新在前；按相反顺序入库，保证按 id 升序即由旧到新
+                for (auto it = lines.crbegin(); it != lines.crend(); ++it) {
+                    const int tab = it->indexOf(QLatin1Char('\t'));
+                    if (tab < 0)
+                        continue;
+                    historyStore_->add(it->left(tab).toStdString(),
+                                       it->mid(tab + 1).toStdString());
+                }
+            }
+            QFile::remove(legacyPath);
+        }
+        for (const auto& e : historyStore_->list(500))
+            appendHistory(QString::fromStdString(e.expr),
+                          QString::fromStdString(e.result), false);
+    } catch (const std::exception&) {
+        // 历史不可用时静默降级为空列表
+    }
+#else
     QFile f(dataDir_ + QStringLiteral("/history.txt"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
@@ -315,11 +396,13 @@ void MainWindow::loadHistory() {
         const int tab = line.indexOf(QLatin1Char('\t'));
         if (tab < 0)
             continue;
-        appendHistory(line.left(tab), line.mid(tab + 1));
+        appendHistory(line.left(tab), line.mid(tab + 1), false);
     }
+#endif
 }
 
 void MainWindow::saveHistory() const {
+#ifndef MK_HAVE_SQLITE
     QFile f(dataDir_ + QStringLiteral("/history.txt"));
     if (!f.open(QIODevice::WriteOnly | QIODevice::Text))
         return;
@@ -329,6 +412,7 @@ void MainWindow::saveHistory() const {
         out << item->data(Qt::UserRole).toString() << QLatin1Char('\t')
             << item->text().section(QStringLiteral("  =  "), 1) << QLatin1Char('\n');
     }
+#endif
 }
 
 void MainWindow::closeEvent(QCloseEvent* event) {
