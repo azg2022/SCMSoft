@@ -6,6 +6,7 @@ add_library(mk_kernel STATIC
     src/printer.cpp
     src/simplify.cpp
     src/differentiate.cpp
+    src/numerics.cpp
 )
 target_include_directories(mk_kernel PUBLIC include)
 

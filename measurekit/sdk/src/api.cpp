@@ -2,14 +2,18 @@
 // 不包含任何业务逻辑（全部委托给 mk_kernel）。
 #include "measurekit.h"
 
+#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <exception>
+#include <functional>
+#include <memory>
 #include <string>
 
 #include "mk/differentiate.h"
 #include "mk/error.h"
 #include "mk/evaluator.h"
+#include "mk/numerics.h"
 #include "mk/parser.h"
 #include "mk/printer.h"
 
@@ -21,6 +25,36 @@ thread_local std::string g_last_error;
 const char* setError(const std::string& msg) {
     g_last_error = msg;
     return g_last_error.c_str();
+}
+
+// 解析表达式为以 var 为自变量的一元函数；解析失败抛 MkError。
+// AST 用 shared_ptr 持有，使函数对象可拷贝（newtonRoot 等接口按值传参）。
+std::function<double(double)> makeUnaryFn(const char* expr, const char* var) {
+    std::shared_ptr<mk::Node> ast(mk::parse(expr).release());
+    std::string name(var);
+    return [ast, name](double x) {
+        mk::Env env;
+        env[name] = x;
+        return mk::evaluate(*ast, env);
+    };
+}
+
+// 解析表达式为以 (xvar, yvar) 为自变量的二元函数；解析失败抛 MkError
+std::function<double(double, double)> makeBinaryFn(const char* expr,
+                                                   const char* xvar,
+                                                   const char* yvar) {
+    std::shared_ptr<mk::Node> ast(mk::parse(expr).release());
+    std::string xname(xvar), yname(yvar);
+    return [ast, xname, yname](double x, double y) {
+        mk::Env env;
+        env[xname] = x;
+        env[yname] = y;
+        return mk::evaluate(*ast, env);
+    };
+}
+
+mk_eval_result numericError(const mk::MkError& e) {
+    return {MK_ERR_NUMERIC, 0.0, setError(e.what()), e.pos()};
 }
 
 } // namespace
@@ -84,6 +118,65 @@ mk_string_result mk_differentiate(const char* expr, const char* var,
         return {MK_ERR_DIFF, nullptr, setError(e.what())};
     } catch (const std::exception& e) {
         return {MK_ERR_DIFF, nullptr, setError(e.what())};
+    }
+}
+
+mk_eval_result mk_newton_root(const char* expr, const char* var,
+                              double x0, double tol) {
+    if (!expr || !var)
+        return {MK_ERR_INVALID_ARG, 0.0, setError("表达式或变量名为空"), 0};
+
+    try {
+        auto f = makeUnaryFn(expr, var);
+        double root = mk::newtonRoot(f, x0, tol <= 0.0 ? 1e-12 : tol);
+        return {MK_OK, root, nullptr, 0};
+    } catch (const mk::MkError& e) {
+        return numericError(e);
+    } catch (const std::exception& e) {
+        return {MK_ERR_NUMERIC, 0.0, setError(e.what()), 0};
+    }
+}
+
+mk_eval_result mk_integrate(const char* expr, const char* var,
+                            double a, double b, double tol) {
+    if (!expr || !var)
+        return {MK_ERR_INVALID_ARG, 0.0, setError("表达式或变量名为空"), 0};
+
+    try {
+        auto f = makeUnaryFn(expr, var);
+        double v = mk::simpsonIntegral(f, a, b, tol <= 0.0 ? 1e-10 : tol);
+        return {MK_OK, v, nullptr, 0};
+    } catch (const mk::MkError& e) {
+        return numericError(e);
+    } catch (const std::exception& e) {
+        return {MK_ERR_NUMERIC, 0.0, setError(e.what()), 0};
+    }
+}
+
+mk_string_result mk_solve_ode(const char* expr, const char* xvar,
+                              const char* yvar,
+                              double x0, double y0, double h, int steps) {
+    if (!expr || !xvar || !yvar)
+        return {MK_ERR_INVALID_ARG, nullptr, setError("表达式或变量名为空")};
+
+    try {
+        auto f = makeBinaryFn(expr, xvar, yvar);
+        auto samples = mk::rungeKutta4(f, x0, y0, h, steps);
+        std::string out;
+        char line[64];
+        for (const auto& s : samples) {
+            std::snprintf(line, sizeof(line), "%.17g\t%.17g\n", s.x, s.y);
+            out += line;
+        }
+        char* buf = static_cast<char*>(std::malloc(out.size() + 1));
+        if (!buf)
+            return {MK_ERR_NUMERIC, nullptr, setError("内存分配失败")};
+        std::memcpy(buf, out.c_str(), out.size() + 1);
+        return {MK_OK, buf, nullptr};
+    } catch (const mk::MkError& e) {
+        return {MK_ERR_NUMERIC, nullptr, setError(e.what())};
+    } catch (const std::exception& e) {
+        return {MK_ERR_NUMERIC, nullptr, setError(e.what())};
     }
 }
 
