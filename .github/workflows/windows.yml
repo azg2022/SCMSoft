@@ -24,7 +24,23 @@ jobs:
           cache: true
 
       - name: CMake 配置
-        run: cmake -S measurekit -B build -G "Visual Studio 17 2022" -A x64 -DMK_BUILD_TESTS=OFF -DMK_BUILD_SDK=OFF
+        run: |
+          cmake -S measurekit -B build -G "Visual Studio 17 2022" -A x64 -DMK_BUILD_TESTS=OFF -DMK_BUILD_SDK=OFF 2>&1 | Tee-Object -FilePath config.log
+          exit $LASTEXITCODE
+
+      - name: 配置失败时上报日志到提交评论
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const log = fs.existsSync('config.log') ? fs.readFileSync('config.log', 'utf8') : '(config.log 不存在)';
+            await github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: '❌ Windows CMake 配置失败日志（末尾）：\n\n```\n' + log.slice(-3500) + '\n```'
+            });
 
       - name: 构建 Release
         run: cmake --build build --config Release
