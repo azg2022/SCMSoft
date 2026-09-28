@@ -29,6 +29,9 @@ jobs:
       - name: 构建 Release
         run: cmake --build build --config Release
 
+      - name: 安装 NSIS（CPack 生成 .exe 安装程序所需）
+        run: choco install nsis --yes --no-progress
+
       - name: 打包（NSIS 安装程序 + ZIP 便携包）
         run: cmake --build build --target package --config Release
 
