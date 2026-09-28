@@ -12,7 +12,9 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-latest
+    # 固定 windows-2022：windows-latest 已迁移到 Windows Server 2025 镜像，
+    # 不再预装 Visual Studio 2022，而本构建使用 "Visual Studio 17 2022" 生成器
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
 
