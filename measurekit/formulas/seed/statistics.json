@@ -5,9 +5,27 @@
     "expr": "(x1+x2+x3)/3",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
     ]
   },
   {
@@ -16,12 +34,48 @@
     "expr": "(x1*w1+x2*w2+x3*w3)/(w1+w2+w3)",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "w1", "label": "权重 1", "unit": "", "domain": "w1>=0", "default": 1},
-      {"symbol": "w2", "label": "权重 2", "unit": "", "domain": "w2>=0", "default": 2},
-      {"symbol": "w3", "label": "权重 3", "unit": "", "domain": "w3>=0, w1+w2+w3>0", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "w1",
+        "label": "权重 1",
+        "unit": "",
+        "domain": "w1>=0",
+        "default": 1
+      },
+      {
+        "symbol": "w2",
+        "label": "权重 2",
+        "unit": "",
+        "domain": "w2>=0",
+        "default": 2
+      },
+      {
+        "symbol": "w3",
+        "label": "权重 3",
+        "unit": "",
+        "domain": "w3>=0, w1+w2+w3>0",
+        "default": 3
+      }
     ]
   },
   {
@@ -30,9 +84,27 @@
     "expr": "(x1*x2*x3)^(1/3)",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "x1>0", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "x2>0", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "x3>0", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "x1>0",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "x2>0",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "x3>0",
+        "default": 3
+      }
     ]
   },
   {
@@ -41,9 +113,27 @@
     "expr": "3/(1/x1+1/x2+1/x3)",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "x1>0", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "x2>0", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "x3>0", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "x1>0",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "x2>0",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "x3>0",
+        "default": 3
+      }
     ]
   },
   {
@@ -52,9 +142,27 @@
     "expr": "((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/2",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
     ]
   },
   {
@@ -63,9 +171,27 @@
     "expr": "((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/3",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
     ]
   },
   {
@@ -74,9 +200,27 @@
     "expr": "sqrt(((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/2)",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "样本 3", "unit": "", "domain": "", "default": 3}
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
     ]
   },
   {
@@ -85,14 +229,62 @@
     "expr": "((x1-mx)*(y1-my)+(x2-mx)*(y2-my)+(x3-mx)*(y3-my))/3",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
-      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
-      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6},
-      {"symbol": "mx", "label": "X 均值", "unit": "", "domain": "", "default": 2},
-      {"symbol": "my", "label": "Y 均值", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "mx",
+        "label": "X 均值",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "my",
+        "label": "Y 均值",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -101,14 +293,62 @@
     "expr": "((x1-mx)*(y1-my)+(x2-mx)*(y2-my)+(x3-mx)*(y3-my))/sqrt(((x1-mx)^2+(x2-mx)^2+(x3-mx)^2)*((y1-my)^2+(y2-my)^2+(y3-my)^2))",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
-      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
-      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6},
-      {"symbol": "mx", "label": "X 均值", "unit": "", "domain": "", "default": 2},
-      {"symbol": "my", "label": "Y 均值", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "mx",
+        "label": "X 均值",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "my",
+        "label": "Y 均值",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -117,12 +357,48 @@
     "expr": "(3*(x1*y1+x2*y2+x3*y3)-(x1+x2+x3)*(y1+y2+y3))/(3*(x1^2+x2^2+x3^2)-(x1+x2+x3)^2)",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
-      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
-      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6}
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
     ]
   },
   {
@@ -131,13 +407,55 @@
     "expr": "((y1+y2+y3)-b*(x1+x2+x3))/3",
     "category": "statistics",
     "params": [
-      {"symbol": "x1", "label": "X 样本 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "X 样本 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "X 样本 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "y1", "label": "Y 样本 1", "unit": "", "domain": "", "default": 2},
-      {"symbol": "y2", "label": "Y 样本 2", "unit": "", "domain": "", "default": 4},
-      {"symbol": "y3", "label": "Y 样本 3", "unit": "", "domain": "", "default": 6},
-      {"symbol": "b", "label": "回归斜率", "unit": "", "domain": "", "default": 2}
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "b",
+        "label": "回归斜率",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      }
     ]
   },
   {
@@ -146,12 +464,48 @@
     "expr": "((y1-p1)^2+(y2-p2)^2+(y3-p3)^2)/3",
     "category": "statistics",
     "params": [
-      {"symbol": "y1", "label": "真实值 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "y2", "label": "真实值 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "y3", "label": "真实值 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "p1", "label": "预测值 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "p2", "label": "预测值 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "p3", "label": "预测值 3", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "y1",
+        "label": "真实值 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "y2",
+        "label": "真实值 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y3",
+        "label": "真实值 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "p1",
+        "label": "预测值 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "p2",
+        "label": "预测值 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "p3",
+        "label": "预测值 3",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -160,12 +514,48 @@
     "expr": "sqrt(((y1-p1)^2+(y2-p2)^2+(y3-p3)^2)/3)",
     "category": "statistics",
     "params": [
-      {"symbol": "y1", "label": "真实值 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "y2", "label": "真实值 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "y3", "label": "真实值 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "p1", "label": "预测值 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "p2", "label": "预测值 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "p3", "label": "预测值 3", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "y1",
+        "label": "真实值 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "y2",
+        "label": "真实值 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y3",
+        "label": "真实值 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "p1",
+        "label": "预测值 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "p2",
+        "label": "预测值 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "p3",
+        "label": "预测值 3",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -174,8 +564,20 @@
     "expr": "sigma/mu",
     "category": "statistics",
     "params": [
-      {"symbol": "sigma", "label": "标准差", "unit": "", "domain": "sigma>=0", "default": 1},
-      {"symbol": "mu", "label": "均值", "unit": "", "domain": "mu!=0", "default": 4}
+      {
+        "symbol": "sigma",
+        "label": "标准差",
+        "unit": "",
+        "domain": "sigma>=0",
+        "default": 1
+      },
+      {
+        "symbol": "mu",
+        "label": "均值",
+        "unit": "",
+        "domain": "mu!=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -184,8 +586,20 @@
     "expr": "sigma/sqrt(n)",
     "category": "statistics",
     "params": [
-      {"symbol": "sigma", "label": "总体标准差", "unit": "", "domain": "sigma>=0", "default": 2},
-      {"symbol": "n", "label": "样本量", "unit": "", "domain": "n>=1", "default": 16}
+      {
+        "symbol": "sigma",
+        "label": "总体标准差",
+        "unit": "",
+        "domain": "sigma>=0",
+        "default": 2
+      },
+      {
+        "symbol": "n",
+        "label": "样本量",
+        "unit": "",
+        "domain": "n>=1",
+        "default": 16
+      }
     ]
   },
   {
@@ -194,9 +608,744 @@
     "expr": "(x-mu)/sigma",
     "category": "statistics",
     "params": [
-      {"symbol": "x", "label": "观测值", "unit": "", "domain": "", "default": 85},
-      {"symbol": "mu", "label": "均值", "unit": "", "domain": "", "default": 80},
-      {"symbol": "sigma", "label": "标准差", "unit": "", "domain": "sigma>0", "default": 5}
+      {
+        "symbol": "x",
+        "label": "观测值",
+        "unit": "",
+        "domain": "",
+        "default": 85
+      },
+      {
+        "symbol": "mu",
+        "label": "均值",
+        "unit": "",
+        "domain": "",
+        "default": 80
+      },
+      {
+        "symbol": "sigma",
+        "label": "标准差",
+        "unit": "",
+        "domain": "sigma>0",
+        "default": 5
+      }
+    ]
+  },
+  {
+    "name": "算术均值（四点）",
+    "latex": "\\bar{x}=\\frac{x_1+x_2+x_3+x_4}{4}",
+    "expr": "(x1+x2+x3+x4)/4",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "加权均值（四点）",
+    "latex": "\\bar{x}_w=\\frac{\\sum x_i w_i}{\\sum w_i}",
+    "expr": "(x1*w1+x2*w2+x3*w3+x4*w4)/(w1+w2+w3+w4)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "w1",
+        "label": "权重 1",
+        "unit": "",
+        "domain": "w1>=0",
+        "default": 1
+      },
+      {
+        "symbol": "w2",
+        "label": "权重 2",
+        "unit": "",
+        "domain": "w2>=0",
+        "default": 2
+      },
+      {
+        "symbol": "w3",
+        "label": "权重 3",
+        "unit": "",
+        "domain": "w3>=0",
+        "default": 3
+      },
+      {
+        "symbol": "w4",
+        "label": "权重 4",
+        "unit": "",
+        "domain": "w4>=0, w1+w2+w3+w4>0",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "几何均值（四点）",
+    "latex": "G=(x_1 x_2 x_3 x_4)^{1/4}",
+    "expr": "(x1*x2*x3*x4)^(1/4)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "x1>0",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "x2>0",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "x3>0",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "样本 4",
+        "unit": "",
+        "domain": "x4>0",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "样本方差（四点）",
+    "latex": "s^2=\\frac{1}{3}\\sum (x_i-\\bar{x})^2",
+    "expr": "((x1-(x1+x2+x3+x4)/4)^2+(x2-(x1+x2+x3+x4)/4)^2+(x3-(x1+x2+x3+x4)/4)^2+(x4-(x1+x2+x3+x4)/4)^2)/3",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "总体标准差（四点）",
+    "latex": "\\sigma=\\sqrt{\\frac{1}{4}\\sum (x_i-\\bar{x})^2}",
+    "expr": "sqrt(((x1-(x1+x2+x3+x4)/4)^2+(x2-(x1+x2+x3+x4)/4)^2+(x3-(x1+x2+x3+x4)/4)^2+(x4-(x1+x2+x3+x4)/4)^2)/4)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "样本标准差（四点）",
+    "latex": "s=\\sqrt{\\frac{1}{3}\\sum (x_i-\\bar{x})^2}",
+    "expr": "sqrt(((x1-(x1+x2+x3+x4)/4)^2+(x2-(x1+x2+x3+x4)/4)^2+(x3-(x1+x2+x3+x4)/4)^2+(x4-(x1+x2+x3+x4)/4)^2)/3)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "极差（全距）",
+    "latex": "R=x_{\\max}-x_{\\min}",
+    "expr": "xmax-xmin",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "xmin",
+        "label": "最小值",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "xmax",
+        "label": "最大值",
+        "unit": "",
+        "domain": "xmax>=xmin",
+        "default": 9
+      }
+    ]
+  },
+  {
+    "name": "中位数位置",
+    "latex": "M=\\frac{n+1}{2}",
+    "expr": "(n+1)/2",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "n",
+        "label": "数据个数",
+        "unit": "",
+        "domain": "n>=1",
+        "default": 7
+      }
+    ]
+  },
+  {
+    "name": "简单移动平均（三点）",
+    "latex": "SMA=\\frac{x_1+x_2+x_3}{3}",
+    "expr": "(x1+x2+x3)/3",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "前期值",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x2",
+        "label": "中期值",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "x3",
+        "label": "当期值",
+        "unit": "",
+        "domain": "",
+        "default": 7
+      }
+    ]
+  },
+  {
+    "name": "加权移动平均（三点）",
+    "latex": "WMA=\\frac{w_1 x_1+w_2 x_2+w_3 x_3}{w_1+w_2+w_3}",
+    "expr": "(w1*x1+w2*x2+w3*x3)/(w1+w2+w3)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "前期值",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x2",
+        "label": "中期值",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "x3",
+        "label": "当期值",
+        "unit": "",
+        "domain": "",
+        "default": 7
+      },
+      {
+        "symbol": "w1",
+        "label": "前期权重",
+        "unit": "",
+        "domain": "w1>=0",
+        "default": 1
+      },
+      {
+        "symbol": "w2",
+        "label": "中期权重",
+        "unit": "",
+        "domain": "w2>=0",
+        "default": 2
+      },
+      {
+        "symbol": "w3",
+        "label": "当期权重",
+        "unit": "",
+        "domain": "w3>=0, w1+w2+w3>0",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "分组数据加权均值",
+    "latex": "\\bar{x}=\\frac{\\sum f_i x_i}{\\sum f_i}",
+    "expr": "(f1*x1+f2*x2+f3*x3)/(f1+f2+f3)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "组中值 1",
+        "unit": "",
+        "domain": "",
+        "default": 10
+      },
+      {
+        "symbol": "x2",
+        "label": "组中值 2",
+        "unit": "",
+        "domain": "",
+        "default": 20
+      },
+      {
+        "symbol": "x3",
+        "label": "组中值 3",
+        "unit": "",
+        "domain": "",
+        "default": 30
+      },
+      {
+        "symbol": "f1",
+        "label": "频数 1",
+        "unit": "",
+        "domain": "f1>=0",
+        "default": 2
+      },
+      {
+        "symbol": "f2",
+        "label": "频数 2",
+        "unit": "",
+        "domain": "f2>=0",
+        "default": 3
+      },
+      {
+        "symbol": "f3",
+        "label": "频数 3",
+        "unit": "",
+        "domain": "f3>=0, f1+f2+f3>0",
+        "default": 5
+      }
+    ]
+  },
+  {
+    "name": "分组数据加权方差",
+    "latex": "\\sigma^2=\\frac{\\sum f_i (x_i-\\bar{x})^2}{\\sum f_i}",
+    "expr": "(f1*(x1-(f1*x1+f2*x2+f3*x3)/(f1+f2+f3))^2+f2*(x2-(f1*x1+f2*x2+f3*x3)/(f1+f2+f3))^2+f3*(x3-(f1*x1+f2*x2+f3*x3)/(f1+f2+f3))^2)/(f1+f2+f3)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "组中值 1",
+        "unit": "",
+        "domain": "",
+        "default": 10
+      },
+      {
+        "symbol": "x2",
+        "label": "组中值 2",
+        "unit": "",
+        "domain": "",
+        "default": 20
+      },
+      {
+        "symbol": "x3",
+        "label": "组中值 3",
+        "unit": "",
+        "domain": "",
+        "default": 30
+      },
+      {
+        "symbol": "f1",
+        "label": "频数 1",
+        "unit": "",
+        "domain": "f1>=0",
+        "default": 2
+      },
+      {
+        "symbol": "f2",
+        "label": "频数 2",
+        "unit": "",
+        "domain": "f2>=0",
+        "default": 3
+      },
+      {
+        "symbol": "f3",
+        "label": "频数 3",
+        "unit": "",
+        "domain": "f3>=0, f1+f2+f3>0",
+        "default": 5
+      }
+    ]
+  },
+  {
+    "name": "最小二乘斜率（四点）",
+    "latex": "b=\\frac{n\\sum x_i y_i-\\sum x_i \\sum y_i}{n\\sum x_i^2-(\\sum x_i)^2}",
+    "expr": "(4*(x1*y1+x2*y2+x3*y3+x4*y4)-(x1+x2+x3+x4)*(y1+y2+y3+y4))/(4*(x1^2+x2^2+x3^2+x4^2)-(x1+x2+x3+x4)^2)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "X 样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "y4",
+        "label": "Y 样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 8
+      }
+    ]
+  },
+  {
+    "name": "最小二乘截距（四点）",
+    "latex": "a=\\frac{\\sum y_i-b\\sum x_i}{n}",
+    "expr": "((y1+y2+y3+y4)-b*(x1+x2+x3+x4))/4",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "X 样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "y4",
+        "label": "Y 样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 8
+      },
+      {
+        "symbol": "b",
+        "label": "回归斜率",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      }
+    ]
+  },
+  {
+    "name": "皮尔逊相关系数（四点）",
+    "latex": "r=\\frac{\\sum (x_i-m_x)(y_i-m_y)}{\\sqrt{\\sum (x_i-m_x)^2 \\sum (y_i-m_y)^2}}",
+    "expr": "((x1-mx)*(y1-my)+(x2-mx)*(y2-my)+(x3-mx)*(y3-my)+(x4-mx)*(y4-my))/sqrt(((x1-mx)^2+(x2-mx)^2+(x3-mx)^2+(x4-mx)^2)*((y1-my)^2+(y2-my)^2+(y3-my)^2+(y4-my)^2))",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "X 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "X 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "X 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x4",
+        "label": "X 样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y1",
+        "label": "Y 样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "y2",
+        "label": "Y 样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y3",
+        "label": "Y 样本 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "y4",
+        "label": "Y 样本 4",
+        "unit": "",
+        "domain": "",
+        "default": 8
+      },
+      {
+        "symbol": "mx",
+        "label": "X 均值",
+        "unit": "",
+        "domain": "",
+        "default": 2.5
+      },
+      {
+        "symbol": "my",
+        "label": "Y 均值",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      }
+    ]
+  },
+  {
+    "name": "决定系数",
+    "latex": "R^2=r^2",
+    "expr": "r^2",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "r",
+        "label": "相关系数",
+        "unit": "",
+        "domain": "-1<=r<=1",
+        "default": 0.8
+      }
+    ]
+  },
+  {
+    "name": "样本变异系数",
+    "latex": "CV=\\frac{s}{\\bar{x}}",
+    "expr": "sqrt(((x1-(x1+x2+x3)/3)^2+(x2-(x1+x2+x3)/3)^2+(x3-(x1+x2+x3)/3)^2)/2)/((x1+x2+x3)/3)",
+    "category": "statistics",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "样本 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "样本 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "样本 3",
+        "unit": "",
+        "domain": "x1+x2+x3!=0",
+        "default": 3
+      }
     ]
   }
 ]

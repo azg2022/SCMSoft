@@ -5,8 +5,20 @@
     "expr": "gamma(n+1)/(gamma(k+1)*gamma(n-k+1))",
     "category": "probability",
     "params": [
-      {"symbol": "n", "label": "总数", "unit": "", "domain": "n>=k, n>=0", "default": 10},
-      {"symbol": "k", "label": "选取数", "unit": "", "domain": "0<=k<=n", "default": 3}
+      {
+        "symbol": "n",
+        "label": "总数",
+        "unit": "",
+        "domain": "n>=k, n>=0",
+        "default": 10
+      },
+      {
+        "symbol": "k",
+        "label": "选取数",
+        "unit": "",
+        "domain": "0<=k<=n",
+        "default": 3
+      }
     ]
   },
   {
@@ -15,8 +27,20 @@
     "expr": "gamma(n+1)/gamma(n-k+1)",
     "category": "probability",
     "params": [
-      {"symbol": "n", "label": "总数", "unit": "", "domain": "n>=k, n>=0", "default": 10},
-      {"symbol": "k", "label": "选取数", "unit": "", "domain": "0<=k<=n", "default": 3}
+      {
+        "symbol": "n",
+        "label": "总数",
+        "unit": "",
+        "domain": "n>=k, n>=0",
+        "default": 10
+      },
+      {
+        "symbol": "k",
+        "label": "选取数",
+        "unit": "",
+        "domain": "0<=k<=n",
+        "default": 3
+      }
     ]
   },
   {
@@ -25,9 +49,27 @@
     "expr": "gamma(n+1)/(gamma(k+1)*gamma(n-k+1))*p^k*(1-p)^(n-k)",
     "category": "probability",
     "params": [
-      {"symbol": "n", "label": "试验次数", "unit": "", "domain": "n>=1", "default": 10},
-      {"symbol": "k", "label": "成功次数", "unit": "", "domain": "0<=k<=n", "default": 3},
-      {"symbol": "p", "label": "单次成功概率", "unit": "", "domain": "0<=p<=1", "default": 0.5}
+      {
+        "symbol": "n",
+        "label": "试验次数",
+        "unit": "",
+        "domain": "n>=1",
+        "default": 10
+      },
+      {
+        "symbol": "k",
+        "label": "成功次数",
+        "unit": "",
+        "domain": "0<=k<=n",
+        "default": 3
+      },
+      {
+        "symbol": "p",
+        "label": "单次成功概率",
+        "unit": "",
+        "domain": "0<=p<=1",
+        "default": 0.5
+      }
     ]
   },
   {
@@ -36,8 +78,20 @@
     "expr": "n*p",
     "category": "probability",
     "params": [
-      {"symbol": "n", "label": "试验次数", "unit": "", "domain": "n>=1", "default": 10},
-      {"symbol": "p", "label": "单次成功概率", "unit": "", "domain": "0<=p<=1", "default": 0.5}
+      {
+        "symbol": "n",
+        "label": "试验次数",
+        "unit": "",
+        "domain": "n>=1",
+        "default": 10
+      },
+      {
+        "symbol": "p",
+        "label": "单次成功概率",
+        "unit": "",
+        "domain": "0<=p<=1",
+        "default": 0.5
+      }
     ]
   },
   {
@@ -46,8 +100,20 @@
     "expr": "n*p*(1-p)",
     "category": "probability",
     "params": [
-      {"symbol": "n", "label": "试验次数", "unit": "", "domain": "n>=1", "default": 10},
-      {"symbol": "p", "label": "单次成功概率", "unit": "", "domain": "0<=p<=1", "default": 0.5}
+      {
+        "symbol": "n",
+        "label": "试验次数",
+        "unit": "",
+        "domain": "n>=1",
+        "default": 10
+      },
+      {
+        "symbol": "p",
+        "label": "单次成功概率",
+        "unit": "",
+        "domain": "0<=p<=1",
+        "default": 0.5
+      }
     ]
   },
   {
@@ -56,9 +122,27 @@
     "expr": "pba*pa/(pba*pa+pbna*(1-pa))",
     "category": "probability",
     "params": [
-      {"symbol": "pba", "label": "条件概率 P(B|A)", "unit": "", "domain": "0<=pba<=1", "default": 0.9},
-      {"symbol": "pa", "label": "先验概率 P(A)", "unit": "", "domain": "0<pa<1", "default": 0.01},
-      {"symbol": "pbna", "label": "条件概率 P(B|非A)", "unit": "", "domain": "0<=pbna<=1", "default": 0.1}
+      {
+        "symbol": "pba",
+        "label": "条件概率 P(B|A)",
+        "unit": "",
+        "domain": "0<=pba<=1",
+        "default": 0.9
+      },
+      {
+        "symbol": "pa",
+        "label": "先验概率 P(A)",
+        "unit": "",
+        "domain": "0<pa<1",
+        "default": 0.01
+      },
+      {
+        "symbol": "pbna",
+        "label": "条件概率 P(B|非A)",
+        "unit": "",
+        "domain": "0<=pbna<=1",
+        "default": 0.1
+      }
     ]
   },
   {
@@ -67,9 +151,27 @@
     "expr": "pba*pa+pbna*(1-pa)",
     "category": "probability",
     "params": [
-      {"symbol": "pba", "label": "条件概率 P(B|A)", "unit": "", "domain": "0<=pba<=1", "default": 0.9},
-      {"symbol": "pa", "label": "概率 P(A)", "unit": "", "domain": "0<=pa<=1", "default": 0.01},
-      {"symbol": "pbna", "label": "条件概率 P(B|非A)", "unit": "", "domain": "0<=pbna<=1", "default": 0.1}
+      {
+        "symbol": "pba",
+        "label": "条件概率 P(B|A)",
+        "unit": "",
+        "domain": "0<=pba<=1",
+        "default": 0.9
+      },
+      {
+        "symbol": "pa",
+        "label": "概率 P(A)",
+        "unit": "",
+        "domain": "0<=pa<=1",
+        "default": 0.01
+      },
+      {
+        "symbol": "pbna",
+        "label": "条件概率 P(B|非A)",
+        "unit": "",
+        "domain": "0<=pbna<=1",
+        "default": 0.1
+      }
     ]
   },
   {
@@ -78,8 +180,20 @@
     "expr": "pab/pb",
     "category": "probability",
     "params": [
-      {"symbol": "pab", "label": "联合概率 P(AB)", "unit": "", "domain": "0<=pab<=1", "default": 0.1},
-      {"symbol": "pb", "label": "概率 P(B)", "unit": "", "domain": "pb>0", "default": 0.5}
+      {
+        "symbol": "pab",
+        "label": "联合概率 P(AB)",
+        "unit": "",
+        "domain": "0<=pab<=1",
+        "default": 0.1
+      },
+      {
+        "symbol": "pb",
+        "label": "概率 P(B)",
+        "unit": "",
+        "domain": "pb>0",
+        "default": 0.5
+      }
     ]
   },
   {
@@ -88,7 +202,13 @@
     "expr": "1-p",
     "category": "probability",
     "params": [
-      {"symbol": "p", "label": "事件概率 P(A)", "unit": "", "domain": "0<=p<=1", "default": 0.3}
+      {
+        "symbol": "p",
+        "label": "事件概率 P(A)",
+        "unit": "",
+        "domain": "0<=p<=1",
+        "default": 0.3
+      }
     ]
   },
   {
@@ -97,9 +217,27 @@
     "expr": "exp(-(x-mu)^2/(2*sigma^2))/(sigma*sqrt(2*pi))",
     "category": "probability",
     "params": [
-      {"symbol": "x", "label": "取值", "unit": "", "domain": "", "default": 0},
-      {"symbol": "mu", "label": "均值 μ", "unit": "", "domain": "", "default": 0},
-      {"symbol": "sigma", "label": "标准差 σ", "unit": "", "domain": "sigma>0", "default": 1}
+      {
+        "symbol": "x",
+        "label": "取值",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "mu",
+        "label": "均值 μ",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "sigma",
+        "label": "标准差 σ",
+        "unit": "",
+        "domain": "sigma>0",
+        "default": 1
+      }
     ]
   },
   {
@@ -108,7 +246,13 @@
     "expr": "exp(-x^2/2)/sqrt(2*pi)",
     "category": "probability",
     "params": [
-      {"symbol": "x", "label": "取值", "unit": "", "domain": "", "default": 0}
+      {
+        "symbol": "x",
+        "label": "取值",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
     ]
   },
   {
@@ -117,9 +261,27 @@
     "expr": "(x-mu)/sigma",
     "category": "probability",
     "params": [
-      {"symbol": "x", "label": "观测值", "unit": "", "domain": "", "default": 1},
-      {"symbol": "mu", "label": "均值 μ", "unit": "", "domain": "", "default": 0},
-      {"symbol": "sigma", "label": "标准差 σ", "unit": "", "domain": "sigma>0", "default": 1}
+      {
+        "symbol": "x",
+        "label": "观测值",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "mu",
+        "label": "均值 μ",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "sigma",
+        "label": "标准差 σ",
+        "unit": "",
+        "domain": "sigma>0",
+        "default": 1
+      }
     ]
   },
   {
@@ -128,8 +290,20 @@
     "expr": "lambda^k*exp(-lambda)/gamma(k+1)",
     "category": "probability",
     "params": [
-      {"symbol": "lambda", "label": "强度 λ", "unit": "", "domain": "lambda>0", "default": 3},
-      {"symbol": "k", "label": "发生次数", "unit": "", "domain": "k>=0", "default": 2}
+      {
+        "symbol": "lambda",
+        "label": "强度 λ",
+        "unit": "",
+        "domain": "lambda>0",
+        "default": 3
+      },
+      {
+        "symbol": "k",
+        "label": "发生次数",
+        "unit": "",
+        "domain": "k>=0",
+        "default": 2
+      }
     ]
   },
   {
@@ -138,8 +312,20 @@
     "expr": "(1-p)^(k-1)*p",
     "category": "probability",
     "params": [
-      {"symbol": "p", "label": "单次成功概率", "unit": "", "domain": "0<p<=1", "default": 0.5},
-      {"symbol": "k", "label": "首次成功的试验次数", "unit": "", "domain": "k>=1", "default": 3}
+      {
+        "symbol": "p",
+        "label": "单次成功概率",
+        "unit": "",
+        "domain": "0<p<=1",
+        "default": 0.5
+      },
+      {
+        "symbol": "k",
+        "label": "首次成功的试验次数",
+        "unit": "",
+        "domain": "k>=1",
+        "default": 3
+      }
     ]
   },
   {
@@ -148,8 +334,20 @@
     "expr": "lambda*exp(-lambda*x)",
     "category": "probability",
     "params": [
-      {"symbol": "lambda", "label": "率参数 λ", "unit": "", "domain": "lambda>0", "default": 1},
-      {"symbol": "x", "label": "取值", "unit": "", "domain": "x>=0", "default": 1}
+      {
+        "symbol": "lambda",
+        "label": "率参数 λ",
+        "unit": "",
+        "domain": "lambda>0",
+        "default": 1
+      },
+      {
+        "symbol": "x",
+        "label": "取值",
+        "unit": "",
+        "domain": "x>=0",
+        "default": 1
+      }
     ]
   },
   {
@@ -158,8 +356,20 @@
     "expr": "1/(b-a)",
     "category": "probability",
     "params": [
-      {"symbol": "a", "label": "下界", "unit": "", "domain": "a<b", "default": 0},
-      {"symbol": "b", "label": "上界", "unit": "", "domain": "b>a", "default": 2}
+      {
+        "symbol": "a",
+        "label": "下界",
+        "unit": "",
+        "domain": "a<b",
+        "default": 0
+      },
+      {
+        "symbol": "b",
+        "label": "上界",
+        "unit": "",
+        "domain": "b>a",
+        "default": 2
+      }
     ]
   },
   {
@@ -168,10 +378,379 @@
     "expr": "gamma(M+1)/(gamma(k+1)*gamma(M-k+1))*gamma(N-M+1)/(gamma(n-k+1)*gamma(N-M-n+k+1))/(gamma(N+1)/(gamma(n+1)*gamma(N-n+1)))",
     "category": "probability",
     "params": [
-      {"symbol": "N", "label": "总体容量", "unit": "", "domain": "N>=1", "default": 20},
-      {"symbol": "M", "label": "总体中成功个体数", "unit": "", "domain": "0<=M<=N", "default": 5},
-      {"symbol": "n", "label": "抽取数", "unit": "", "domain": "1<=n<=N", "default": 4},
-      {"symbol": "k", "label": "抽中成功个体数", "unit": "", "domain": "0<=k<=min(M,n)", "default": 1}
+      {
+        "symbol": "N",
+        "label": "总体容量",
+        "unit": "",
+        "domain": "N>=1",
+        "default": 20
+      },
+      {
+        "symbol": "M",
+        "label": "总体中成功个体数",
+        "unit": "",
+        "domain": "0<=M<=N",
+        "default": 5
+      },
+      {
+        "symbol": "n",
+        "label": "抽取数",
+        "unit": "",
+        "domain": "1<=n<=N",
+        "default": 4
+      },
+      {
+        "symbol": "k",
+        "label": "抽中成功个体数",
+        "unit": "",
+        "domain": "0<=k<=min(M,n)",
+        "default": 1
+      }
+    ]
+  },
+  {
+    "name": "阶乘公式",
+    "latex": "n!=\\Gamma(n+1)",
+    "expr": "gamma(n+1)",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "n",
+        "label": "非负整数 n",
+        "unit": "",
+        "domain": "n>=0, 整数",
+        "default": 5
+      }
+    ]
+  },
+  {
+    "name": "古典概型概率",
+    "latex": "P(A)=\\frac{m}{n}",
+    "expr": "m/n",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "m",
+        "label": "有利结果数",
+        "unit": "",
+        "domain": "m>=0, 整数",
+        "default": 3
+      },
+      {
+        "symbol": "n",
+        "label": "所有等可能结果数",
+        "unit": "",
+        "domain": "n>=1, 整数",
+        "default": 10
+      }
+    ]
+  },
+  {
+    "name": "伯努利分布（0-1 分布）概率",
+    "latex": "P(X=x)=p^x(1-p)^{1-x}",
+    "expr": "p^x*(1-p)^(1-x)",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "p",
+        "label": "成功概率",
+        "unit": "",
+        "domain": "0<=p<=1",
+        "default": 0.5
+      },
+      {
+        "symbol": "x",
+        "label": "取值（0 或 1）",
+        "unit": "",
+        "domain": "x∈{0,1}",
+        "default": 1
+      }
+    ]
+  },
+  {
+    "name": "概率加法公式",
+    "latex": "P(A\\cup B)=P(A)+P(B)-P(AB)",
+    "expr": "pa+pb-pab",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "pa",
+        "label": "概率 P(A)",
+        "unit": "",
+        "domain": "0<=pa<=1",
+        "default": 0.3
+      },
+      {
+        "symbol": "pb",
+        "label": "概率 P(B)",
+        "unit": "",
+        "domain": "0<=pb<=1",
+        "default": 0.4
+      },
+      {
+        "symbol": "pab",
+        "label": "联合概率 P(AB)",
+        "unit": "",
+        "domain": "pab<=min(pa,pb)",
+        "default": 0.1
+      }
+    ]
+  },
+  {
+    "name": "独立事件积的概率",
+    "latex": "P(AB)=P(A)P(B)",
+    "expr": "pa*pb",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "pa",
+        "label": "概率 P(A)",
+        "unit": "",
+        "domain": "0<=pa<=1",
+        "default": 0.3
+      },
+      {
+        "symbol": "pb",
+        "label": "概率 P(B)",
+        "unit": "",
+        "domain": "0<=pb<=1",
+        "default": 0.4
+      }
+    ]
+  },
+  {
+    "name": "全概率公式（三分割）",
+    "latex": "P(B)=\\sum_{i=1}^{3}P(B|A_i)P(A_i)",
+    "expr": "p1*pa1+p2*pa2+p3*(1-pa1-pa2)",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "pa1",
+        "label": "概率 P(A1)",
+        "unit": "",
+        "domain": "0<=pa1<=1",
+        "default": 0.3
+      },
+      {
+        "symbol": "pa2",
+        "label": "概率 P(A2)",
+        "unit": "",
+        "domain": "0<=pa2<=1",
+        "default": 0.3
+      },
+      {
+        "symbol": "p1",
+        "label": "条件概率 P(B|A1)",
+        "unit": "",
+        "domain": "0<=p1<=1",
+        "default": 0.8
+      },
+      {
+        "symbol": "p2",
+        "label": "条件概率 P(B|A2)",
+        "unit": "",
+        "domain": "0<=p2<=1",
+        "default": 0.6
+      },
+      {
+        "symbol": "p3",
+        "label": "条件概率 P(B|A3)",
+        "unit": "",
+        "domain": "0<=p3<=1",
+        "default": 0.4
+      }
+    ]
+  },
+  {
+    "name": "泊松分布期望",
+    "latex": "E(X)=\\lambda",
+    "expr": "lambda",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "lambda",
+        "label": "强度 λ",
+        "unit": "",
+        "domain": "lambda>0",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "泊松分布方差",
+    "latex": "D(X)=\\lambda",
+    "expr": "lambda",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "lambda",
+        "label": "强度 λ",
+        "unit": "",
+        "domain": "lambda>0",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "几何分布期望",
+    "latex": "E(X)=\\frac{1}{p}",
+    "expr": "1/p",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "p",
+        "label": "单次成功概率",
+        "unit": "",
+        "domain": "0<p<=1",
+        "default": 0.5
+      }
+    ]
+  },
+  {
+    "name": "几何分布方差",
+    "latex": "D(X)=\\frac{1-p}{p^2}",
+    "expr": "(1-p)/p^2",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "p",
+        "label": "单次成功概率",
+        "unit": "",
+        "domain": "0<p<=1",
+        "default": 0.5
+      }
+    ]
+  },
+  {
+    "name": "超几何分布期望",
+    "latex": "E(X)=n\\frac{M}{N}",
+    "expr": "n*M/N",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "N",
+        "label": "总体容量",
+        "unit": "",
+        "domain": "N>=1",
+        "default": 20
+      },
+      {
+        "symbol": "M",
+        "label": "总体中成功个体数",
+        "unit": "",
+        "domain": "0<=M<=N",
+        "default": 5
+      },
+      {
+        "symbol": "n",
+        "label": "抽取数",
+        "unit": "",
+        "domain": "1<=n<=N",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "超几何分布方差",
+    "latex": "D(X)=n\\frac{M}{N}\\left(1-\\frac{M}{N}\\right)\\frac{N-n}{N-1}",
+    "expr": "n*(M/N)*(1-M/N)*(N-n)/(N-1)",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "N",
+        "label": "总体容量",
+        "unit": "",
+        "domain": "N>1",
+        "default": 20
+      },
+      {
+        "symbol": "M",
+        "label": "总体中成功个体数",
+        "unit": "",
+        "domain": "0<=M<=N",
+        "default": 5
+      },
+      {
+        "symbol": "n",
+        "label": "抽取数",
+        "unit": "",
+        "domain": "1<=n<=N",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "指数分布期望",
+    "latex": "E(X)=\\frac{1}{\\lambda}",
+    "expr": "1/lambda",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "lambda",
+        "label": "率参数 λ",
+        "unit": "",
+        "domain": "lambda>0",
+        "default": 1
+      }
+    ]
+  },
+  {
+    "name": "指数分布方差",
+    "latex": "D(X)=\\frac{1}{\\lambda^2}",
+    "expr": "1/lambda^2",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "lambda",
+        "label": "率参数 λ",
+        "unit": "",
+        "domain": "lambda>0",
+        "default": 1
+      }
+    ]
+  },
+  {
+    "name": "均匀分布期望",
+    "latex": "E(X)=\\frac{a+b}{2}",
+    "expr": "(a+b)/2",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "下界",
+        "unit": "",
+        "domain": "a<b",
+        "default": 0
+      },
+      {
+        "symbol": "b",
+        "label": "上界",
+        "unit": "",
+        "domain": "b>a",
+        "default": 2
+      }
+    ]
+  },
+  {
+    "name": "均匀分布方差",
+    "latex": "D(X)=\\frac{(b-a)^2}{12}",
+    "expr": "(b-a)^2/12",
+    "category": "probability",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "下界",
+        "unit": "",
+        "domain": "a<b",
+        "default": 0
+      },
+      {
+        "symbol": "b",
+        "label": "上界",
+        "unit": "",
+        "domain": "b>a",
+        "default": 2
+      }
     ]
   }
 ]

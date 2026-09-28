@@ -5,10 +5,34 @@
     "expr": "a*d-b*c",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -17,10 +41,34 @@
     "expr": "d/(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "ad-bc!=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -29,10 +77,34 @@
     "expr": "-b/(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "ad-bc!=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -41,10 +113,34 @@
     "expr": "-c/(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "ad-bc!=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -53,10 +149,34 @@
     "expr": "a/(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "ad-bc!=0", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "ad-bc!=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -65,8 +185,20 @@
     "expr": "a+d",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -75,10 +207,34 @@
     "expr": "(a+d)^2-4*(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
     ]
   },
   {
@@ -87,10 +243,34 @@
     "expr": "((a+d)+sqrt((a+d)^2-4*(a*d-b*c)))/2",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "判别式>=0", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "判别式>=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -99,10 +279,34 @@
     "expr": "((a+d)-sqrt((a+d)^2-4*(a*d-b*c)))/2",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a21", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a22", "unit": "", "domain": "判别式>=0", "default": 4}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "判别式>=0",
+        "default": 4
+      }
     ]
   },
   {
@@ -111,12 +315,48 @@
     "expr": "(e*d-b*f)/(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "x 系数（方程 1）", "unit": "", "domain": "", "default": 2},
-      {"symbol": "b", "label": "y 系数（方程 1）", "unit": "", "domain": "", "default": 1},
-      {"symbol": "c", "label": "x 系数（方程 2）", "unit": "", "domain": "", "default": 1},
-      {"symbol": "d", "label": "y 系数（方程 2）", "unit": "", "domain": "ad-bc!=0", "default": 3},
-      {"symbol": "e", "label": "常数项（方程 1）", "unit": "", "domain": "", "default": 5},
-      {"symbol": "f", "label": "常数项（方程 2）", "unit": "", "domain": "", "default": 6}
+      {
+        "symbol": "a",
+        "label": "x 系数（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "b",
+        "label": "y 系数（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "c",
+        "label": "x 系数（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "d",
+        "label": "y 系数（方程 2）",
+        "unit": "",
+        "domain": "ad-bc!=0",
+        "default": 3
+      },
+      {
+        "symbol": "e",
+        "label": "常数项（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "f",
+        "label": "常数项（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
     ]
   },
   {
@@ -125,12 +365,48 @@
     "expr": "(a*f-e*c)/(a*d-b*c)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "x 系数（方程 1）", "unit": "", "domain": "", "default": 2},
-      {"symbol": "b", "label": "y 系数（方程 1）", "unit": "", "domain": "", "default": 1},
-      {"symbol": "c", "label": "x 系数（方程 2）", "unit": "", "domain": "", "default": 1},
-      {"symbol": "d", "label": "y 系数（方程 2）", "unit": "", "domain": "ad-bc!=0", "default": 3},
-      {"symbol": "e", "label": "常数项（方程 1）", "unit": "", "domain": "", "default": 5},
-      {"symbol": "f", "label": "常数项（方程 2）", "unit": "", "domain": "", "default": 6}
+      {
+        "symbol": "a",
+        "label": "x 系数（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "b",
+        "label": "y 系数（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "c",
+        "label": "x 系数（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "d",
+        "label": "y 系数（方程 2）",
+        "unit": "",
+        "domain": "ad-bc!=0",
+        "default": 3
+      },
+      {
+        "symbol": "e",
+        "label": "常数项（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "f",
+        "label": "常数项（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
     ]
   },
   {
@@ -139,15 +415,69 @@
     "expr": "a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g)",
     "category": "linalg",
     "params": [
-      {"symbol": "a", "label": "元素 a11", "unit": "", "domain": "", "default": 1},
-      {"symbol": "b", "label": "元素 a12", "unit": "", "domain": "", "default": 2},
-      {"symbol": "c", "label": "元素 a13", "unit": "", "domain": "", "default": 3},
-      {"symbol": "d", "label": "元素 a21", "unit": "", "domain": "", "default": 0},
-      {"symbol": "e", "label": "元素 a22", "unit": "", "domain": "", "default": 1},
-      {"symbol": "f", "label": "元素 a23", "unit": "", "domain": "", "default": 4},
-      {"symbol": "g", "label": "元素 a31", "unit": "", "domain": "", "default": 5},
-      {"symbol": "h", "label": "元素 a32", "unit": "", "domain": "", "default": 6},
-      {"symbol": "i", "label": "元素 a33", "unit": "", "domain": "", "default": 0}
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
     ]
   },
   {
@@ -156,10 +486,34 @@
     "expr": "a11*b11+a12*b21",
     "category": "linalg",
     "params": [
-      {"symbol": "a11", "label": "A(1,1)", "unit": "", "domain": "", "default": 1},
-      {"symbol": "a12", "label": "A(1,2)", "unit": "", "domain": "", "default": 2},
-      {"symbol": "b11", "label": "B(1,1)", "unit": "", "domain": "", "default": 5},
-      {"symbol": "b21", "label": "B(2,1)", "unit": "", "domain": "", "default": 7}
+      {
+        "symbol": "a11",
+        "label": "A(1,1)",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "a12",
+        "label": "A(1,2)",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "b11",
+        "label": "B(1,1)",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "b21",
+        "label": "B(2,1)",
+        "unit": "",
+        "domain": "",
+        "default": 7
+      }
     ]
   },
   {
@@ -168,10 +522,34 @@
     "expr": "a11*b12+a12*b22",
     "category": "linalg",
     "params": [
-      {"symbol": "a11", "label": "A(1,1)", "unit": "", "domain": "", "default": 1},
-      {"symbol": "a12", "label": "A(1,2)", "unit": "", "domain": "", "default": 2},
-      {"symbol": "b12", "label": "B(1,2)", "unit": "", "domain": "", "default": 6},
-      {"symbol": "b22", "label": "B(2,2)", "unit": "", "domain": "", "default": 8}
+      {
+        "symbol": "a11",
+        "label": "A(1,1)",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "a12",
+        "label": "A(1,2)",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "b12",
+        "label": "B(1,2)",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "b22",
+        "label": "B(2,2)",
+        "unit": "",
+        "domain": "",
+        "default": 8
+      }
     ]
   },
   {
@@ -180,12 +558,48 @@
     "expr": "x1*y1+x2*y2+x3*y3",
     "category": "linalg",
     "params": [
-      {"symbol": "x1", "label": "x 分量 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "x 分量 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "x 分量 3", "unit": "", "domain": "", "default": 3},
-      {"symbol": "y1", "label": "y 分量 1", "unit": "", "domain": "", "default": 4},
-      {"symbol": "y2", "label": "y 分量 2", "unit": "", "domain": "", "default": 5},
-      {"symbol": "y3", "label": "y 分量 3", "unit": "", "domain": "", "default": 6}
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
     ]
   },
   {
@@ -194,9 +608,27 @@
     "expr": "sqrt(x1^2+x2^2+x3^2)",
     "category": "linalg",
     "params": [
-      {"symbol": "x1", "label": "分量 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "分量 2", "unit": "", "domain": "", "default": 2},
-      {"symbol": "x3", "label": "分量 3", "unit": "", "domain": "", "default": 2}
+      {
+        "symbol": "x1",
+        "label": "分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      }
     ]
   },
   {
@@ -205,12 +637,48 @@
     "expr": "(x1*y1+x2*y2+x3*y3)/(sqrt(x1^2+x2^2+x3^2)*sqrt(y1^2+y2^2+y3^2))",
     "category": "linalg",
     "params": [
-      {"symbol": "x1", "label": "x 分量 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "x 分量 2", "unit": "", "domain": "", "default": 0},
-      {"symbol": "x3", "label": "x 分量 3", "unit": "", "domain": "", "default": 0},
-      {"symbol": "y1", "label": "y 分量 1", "unit": "", "domain": "", "default": 0},
-      {"symbol": "y2", "label": "y 分量 2", "unit": "", "domain": "", "default": 1},
-      {"symbol": "y3", "label": "y 分量 3", "unit": "", "domain": "两向量均非零", "default": 0}
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "两向量均非零",
+        "default": 0
+      }
     ]
   },
   {
@@ -219,10 +687,1052 @@
     "expr": "x1*y2-x2*y1",
     "category": "linalg",
     "params": [
-      {"symbol": "x1", "label": "x 分量 1", "unit": "", "domain": "", "default": 1},
-      {"symbol": "x2", "label": "x 分量 2", "unit": "", "domain": "", "default": 0},
-      {"symbol": "y1", "label": "y 分量 1", "unit": "", "domain": "", "default": 0},
-      {"symbol": "y2", "label": "y 分量 2", "unit": "", "domain": "", "default": 1}
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      }
+    ]
+  },
+  {
+    "name": "三维向量叉积 x 分量",
+    "latex": "(\\vec{x}\\times\\vec{y})_1=x_2y_3-x_3y_2",
+    "expr": "x2*y3-x3*y2",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "三维向量叉积 y 分量",
+    "latex": "(\\vec{x}\\times\\vec{y})_2=x_3y_1-x_1y_3",
+    "expr": "x3*y1-x1*y3",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "三维向量叉积 z 分量",
+    "latex": "(\\vec{x}\\times\\vec{y})_3=x_1y_2-x_2y_1",
+    "expr": "x1*y2-x2*y1",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "二维向量模长",
+    "latex": "|\\vec{x}|=\\sqrt{x_1^2+x_2^2}",
+    "expr": "sqrt(x1^2+x2^2)",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "x2",
+        "label": "分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "三维向量夹角（弧度）",
+    "latex": "\\theta=\\arccos\\frac{\\vec{x}\\cdot\\vec{y}}{|\\vec{x}||\\vec{y}|}",
+    "expr": "acos((x1*y1+x2*y2+x3*y3)/(sqrt(x1^2+x2^2+x3^2)*sqrt(y1^2+y2^2+y3^2)))",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "两向量均非零",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "向量标量投影（投影长度）",
+    "latex": "\\mathrm{proj}_{\\vec{y}}\\vec{x}=\\frac{\\vec{x}\\cdot\\vec{y}}{|\\vec{y}|}",
+    "expr": "(x1*y1+x2*y2+x3*y3)/sqrt(y1^2+y2^2+y3^2)",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "y 非零",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "向量投影 x 分量",
+    "latex": "(\\mathrm{proj}_{\\vec{y}}\\vec{x})_1=\\frac{\\vec{x}\\cdot\\vec{y}}{|\\vec{y}|^2}y_1",
+    "expr": "((x1*y1+x2*y2+x3*y3)/(y1^2+y2^2+y3^2))*y1",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "x1",
+        "label": "x 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "x2",
+        "label": "x 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "x3",
+        "label": "x 分量 3",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "y1",
+        "label": "y 分量 1",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "y2",
+        "label": "y 分量 2",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "y3",
+        "label": "y 分量 3",
+        "unit": "",
+        "domain": "y 非零",
+        "default": 6
+      }
+    ]
+  },
+  {
+    "name": "3x3 矩阵的迹",
+    "latex": "\\mathrm{tr}(A)=a+e+i",
+    "expr": "a+e+i",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "3x3 行列式主对角线项之和",
+    "latex": "aei+bfg+cdh",
+    "expr": "a*e*i+b*f*g+c*d*h",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "3x3 行列式副对角线项之和",
+    "latex": "ceg+bdi+afh",
+    "expr": "c*e*g+b*d*i+a*f*h",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "3x3 元素 a11 的余子式",
+    "latex": "M_{11}=ei-fh",
+    "expr": "e*i-f*h",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "3x3 元素 a12 的代数余子式",
+    "latex": "A_{12}=-(di-fg)=fg-di",
+    "expr": "f*g-d*i",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "3x3 元素 a22 的余子式",
+    "latex": "M_{22}=ai-cg",
+    "expr": "a*i-c*g",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "2x2 伴随矩阵（1,2）元素",
+    "latex": "\\mathrm{adj}(A)_{12}=-b",
+    "expr": "-b",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "克拉默法则 x（三元方程组）",
+    "latex": "x=\\frac{j(ei-fh)-b(ki-fl)+c(kh-el)}{\\det A}",
+    "expr": "(j*(e*i-f*h)-b*(k*i-f*l)+c*(k*h-e*l))/(a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g))",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "系数行列式!=0",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "j",
+        "label": "常数项（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "k",
+        "label": "常数项（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "l",
+        "label": "常数项（方程 3）",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "克拉默法则 y（三元方程组）",
+    "latex": "y=\\frac{a(ki-fl)-j(di-fg)+c(dl-kg)}{\\det A}",
+    "expr": "(a*(k*i-f*l)-j*(d*i-f*g)+c*(d*l-k*g))/(a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g))",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "系数行列式!=0",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "j",
+        "label": "常数项（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "k",
+        "label": "常数项（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "l",
+        "label": "常数项（方程 3）",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "克拉默法则 z（三元方程组）",
+    "latex": "z=\\frac{a(el-kh)-b(dl-kg)+j(dh-eg)}{\\det A}",
+    "expr": "(a*(e*l-k*h)-b*(d*l-k*g)+j*(d*h-e*g))/(a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g))",
+    "category": "linalg",
+    "params": [
+      {
+        "symbol": "a",
+        "label": "元素 a11",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "b",
+        "label": "元素 a12",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "c",
+        "label": "元素 a13",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      },
+      {
+        "symbol": "d",
+        "label": "元素 a21",
+        "unit": "",
+        "domain": "系数行列式!=0",
+        "default": 0
+      },
+      {
+        "symbol": "e",
+        "label": "元素 a22",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "f",
+        "label": "元素 a23",
+        "unit": "",
+        "domain": "",
+        "default": 4
+      },
+      {
+        "symbol": "g",
+        "label": "元素 a31",
+        "unit": "",
+        "domain": "",
+        "default": 5
+      },
+      {
+        "symbol": "h",
+        "label": "元素 a32",
+        "unit": "",
+        "domain": "",
+        "default": 6
+      },
+      {
+        "symbol": "i",
+        "label": "元素 a33",
+        "unit": "",
+        "domain": "",
+        "default": 0
+      },
+      {
+        "symbol": "j",
+        "label": "常数项（方程 1）",
+        "unit": "",
+        "domain": "",
+        "default": 1
+      },
+      {
+        "symbol": "k",
+        "label": "常数项（方程 2）",
+        "unit": "",
+        "domain": "",
+        "default": 2
+      },
+      {
+        "symbol": "l",
+        "label": "常数项（方程 3）",
+        "unit": "",
+        "domain": "",
+        "default": 3
+      }
     ]
   }
 ]
